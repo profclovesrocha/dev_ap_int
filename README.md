@@ -1,15 +1,4 @@
-# Programação para Internet n279
+# DESENVOLVIMENTO DE APLICAÇÕES PARA INTERNET
 - Docente: Prof. Mentor Cloves Rocha.
-- PROGRAMAÇÃO PARA INTERNET  - N 279.
 - Discentes: ...
-- Aughusto José;
-- Bruno Alexsandro;
-- Vinicius Taiguara N. Santos;
-- Giovanne Henrique Araujo de Lima;
-- Brener Santana Magalhães 
-- Edson Guilherme
-- Fellipe José
-- Gabriel Felipe
-- Maickon Henrique
-- Leonardo Coelho;
-- João Victor;
+- ...?

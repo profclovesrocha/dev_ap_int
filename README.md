@@ -11,3 +11,4 @@
 - Davi Perrelli
 - Mateus José 
 - Kauã Heinzel 
+- Richarlyson Lucas

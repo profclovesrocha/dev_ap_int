@@ -3,3 +3,4 @@
 - Discentes: 
 - Sofia Marques
 - Camila Fernandes 
+- Yves Ulisses

@@ -28,3 +28,4 @@ The structured method based on Purpose, Project, and Challenges is an approach t
 - Guilherme Cauã
 - Walter Rangel S. Neto
 - Pedro Joaquim da Silva Silvestre
+- João Carlos Gonçalves da Silva Jr

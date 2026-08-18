@@ -21,3 +21,4 @@ The structured method based on Purpose, Project, and Challenges is an approach t
 - Augusto Freire 
 - Genilson Luciano
 - Diego Bulhões
+- Thiago Guimarães 

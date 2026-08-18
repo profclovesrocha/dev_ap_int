@@ -4,3 +4,4 @@
 - Sofia Marques
 - Camila Fernandes 
 - Yves Ulisses
+- David Brian

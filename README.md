@@ -14,7 +14,8 @@ The structured method based on Purpose, Project, and Challenges is an approach t
 - Isabely Souza 
 - Davi Perrelli
 - Mateus José 
-- Kauã Heinzel 
+- Kauã Heinzel
+- Gabriel Vereda 
 - Richarlyson Lucas
 - Rayanne E. Melo
 - Miguel Arthur

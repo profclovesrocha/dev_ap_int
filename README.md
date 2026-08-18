@@ -6,4 +6,5 @@
 - Yves Ulisses
 - David Brian
 - Camila Silva
-- Lua Barros 
+- Lua Barros
+- Isabely Souza 

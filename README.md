@@ -6,3 +6,4 @@
 - Yves Ulisses
 - David Brian
 - Camila Silva
+- Miguel Arthur

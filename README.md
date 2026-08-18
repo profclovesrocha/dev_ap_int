@@ -8,3 +8,4 @@
 - Camila Silva
 - Lua Barros
 - Isabely Souza 
+- Davi Perrelli 

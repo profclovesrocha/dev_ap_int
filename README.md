@@ -30,4 +30,5 @@ The structured method based on Purpose, Project, and Challenges is an approach t
 - Pedro Joaquim da Silva Silvestre
 - João Carlos Gonçalves da Silva Jr
 - Ana Luísa Rodrigues
-- Maria Eduarda Gomes 
+- Maria Eduarda Gomes
+- Willian Henrique 

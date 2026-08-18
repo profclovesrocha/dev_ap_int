@@ -14,3 +14,4 @@
 - Richarlyson Lucas
 - Rayanne E. Melo
 - Miguel Arthur
+- Augusto Freire 

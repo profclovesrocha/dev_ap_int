@@ -10,3 +10,4 @@
 - Isabely Souza 
 - Davi Perrelli
 - Mateus José 
+- Kauã Heinzel 

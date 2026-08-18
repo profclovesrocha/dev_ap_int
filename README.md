@@ -33,6 +33,7 @@ The coordination and administration of Uninassau Olinda have decided that the se
 - Pedro Joaquim da Silva Silvestre
 - João Carlos Gonçalves da Silva Jr
 - Ana Luísa Rodrigues
+- rebeca souza
 - Maria Eduarda Gomes
 - Willian Henrique
 

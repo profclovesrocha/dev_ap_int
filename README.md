@@ -1,4 +1,4 @@
 # DESENVOLVIMENTO DE APLICAÇÕES PARA INTERNET
 - Docente: Prof. Mentor Cloves Rocha.
-- Discentes: ...
-- ...?
+- Discentes: 
+- Sofia Marques

@@ -13,3 +13,4 @@
 - Kauã Heinzel 
 - Richarlyson Lucas
 - Rayanne E. Melo
+- Miguel Arthur

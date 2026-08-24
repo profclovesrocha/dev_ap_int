@@ -50,5 +50,6 @@ The coordination and administration of Uninassau Olinda have decided that the se
 10. ?
 
 # Mind Map
+<img width="4662" height="5438" alt="NotebookLM Mind Map (9)" src="https://github.com/user-attachments/assets/1842e8b5-cf54-4c01-a771-9b5087858672" />
 
 # DEVELOPMENT OF INTERNET APPLICATIONS - Course_Blueprint

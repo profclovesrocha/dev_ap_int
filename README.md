@@ -2,8 +2,10 @@
 - Subject: Internet Application Development.
 * Welcome to the course that forms the foundation of web development. Here, you will learn to translate real-world problems into structured solutions, developing the logical reasoning for the web that is essential for any web programmer.
 - The structured method based on Purpose, Project, and Challenges is an approach to management and active learning (often associated with Project-Based Learning - PBL or Challenges - CBL) focused on giving practical meaning to learning or work, connecting intention to real action.
+
 # ASSESSMENT 2
-The coordination and administration of Uninassau Olinda have decided that the second-semester assessments (Assessment 2 – AV2) will be split between projects and a written exam—that is, two assessment components—with the project accounting for 60% and the written exam for 40% of the AV2 grade.
+- The coordination and administration of Uninassau Olinda have decided that the second-semester assessments (Assessment 2 – AV2) will be split between projects and a written exam—that is, two assessment components—with the project accounting for 60% and the written exam for 40% of the AV2 grade.
+- Practice Test for Written Exams (ENADE Style): https://abre.ai/devapint-enade-style 
 
 - Docente: Prof. Mentor Cloves Rocha.
 - Discentes: 

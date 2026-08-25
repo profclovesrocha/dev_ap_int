@@ -40,7 +40,8 @@
 - Willian Henrique
 - Miguel Pereira 
 - Bruno Oliveira de Araujo
-- Vanessa Marcela do Nascimento Moreira 
+- Vanessa Marcela do Nascimento Moreira
+- Luiz Davi Nunes
 
 # GROUPS / PROJECTS / CHALLENGES
 1. Sofia,...

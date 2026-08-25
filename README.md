@@ -39,6 +39,7 @@
 - Maria Eduarda Gomes
 - Willian Henrique
 - Miguel Pereira 
+- Bruno Oliveira de Araujo
 
 # GROUPS / PROJECTS / CHALLENGES
 1. Sofia,...

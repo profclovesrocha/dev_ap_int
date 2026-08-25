@@ -38,6 +38,7 @@
 - Rebeca souza
 - Maria Eduarda Gomes
 - Willian Henrique
+- Miguel Pereira 
 
 # GROUPS / PROJECTS / CHALLENGES
 1. Sofia,...

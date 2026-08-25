@@ -57,8 +57,8 @@
 10. ?
 
 # Mind Map
-<img width="4662" height="5438" alt="NotebookLM Mind Map (9)" src="https://github.com/user-attachments/assets/1842e8b5-cf54-4c01-a771-9b5087858672" />
+<img width="4582" height="6437" alt="NotebookLM Mind Map (11)" src="https://github.com/user-attachments/assets/e00c7e7f-ecaa-4a56-83de-debf0dca9892" />
 
 # Roadmap - Course_Blueprint
-<img width="2752" height="1536" alt="Web_Development_Course_2026 2_Roadmap" src="https://github.com/user-attachments/assets/90885017-4ef6-45e2-aa96-54f0258aa6ad" />
+
 

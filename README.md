@@ -4,7 +4,7 @@
 - The structured method based on Purpose, Project, and Challenges is an approach to management and active learning (often associated with Project-Based Learning - PBL or Challenges - CBL) focused on giving practical meaning to learning or work, connecting intention to real action.
 
 # ASSESSMENT 2
-- The coordination and administration of Uninassau Olinda have decided that the second-semester assessments (Assessment 2 – AV2) will be split between projects and a written exam—that is, two assessment components—with the project accounting for 60% and the written exam for 40% of the AV2 grade.
+- The coordination and administration of Uninassau Olinda have decided that the second-semester assessments (Assessment 2 – AV2) will be split between projects and a written exam—that is, two assessment components—with the project accounting for 80% and the written exam for 20% of the AV2 grade.
 - Practice Test for Written Exams (ENADE Style): https://abre.ai/devapint-enade-style 
 
 - Docente: Prof. Mentor Cloves Rocha.

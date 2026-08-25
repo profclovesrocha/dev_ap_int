@@ -60,5 +60,6 @@
 <img width="4582" height="6437" alt="NotebookLM Mind Map (11)" src="https://github.com/user-attachments/assets/e00c7e7f-ecaa-4a56-83de-debf0dca9892" />
 
 # Roadmap - Course_Blueprint
+[AV2_Web_Development_Kickoff.pdf](https://github.com/user-attachments/files/31427064/AV2_Web_Development_Kickoff.pdf)
 
 

@@ -1,5 +1,5 @@
 # Welcome!
-- Subject: Internet Application Development.
+- Class Log
 * Welcome to the course that forms the foundation of web development. Here, you will learn to translate real-world problems into structured solutions, developing the logical reasoning for the web that is essential for any web programmer.
 - The structured method based on Purpose, Project, and Challenges is an approach to management and active learning (often associated with Project-Based Learning - PBL or Challenges - CBL) focused on giving practical meaning to learning or work, connecting intention to real action.
 

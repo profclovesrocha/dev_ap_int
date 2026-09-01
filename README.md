@@ -19,9 +19,10 @@
 7. Fundamentos Back-end Lógica Server-side Node.js ou Python Criação de servidores básicos, rotas e regras de negócio.
 8. Publicação Deploy GitHub Pages/Vercel - Colocar a aplicação web no ar para acesso público.
 # ⚙️ Como Funciona uma Aplicação Web? (A Arquitetura)
-* 🧑‍💻 CLIENTE (Navegador/Front-end)
+* 🧑‍💻 CLIENTE (Navegador/Front-end).
 * É a interface. Onde o usuário clica, digita e visualiza os dados (HTML/CSS/JS).
-* ⬇️ Faz uma requisição HTTP (GET, POST, PUT, DELETE)☁️ A INTERNET (APIs)A ponte de comunicação. Transporte de dados via JSON.
+* ⬇️ Faz uma requisição HTTP (GET, POST, PUT, DELETE).
+* ☁️ A INTERNET (APIs)A ponte de comunicação. Transporte de dados via JSON.
 * ⬇️ Entrega da requisição
 * 🖥️ SERVIDOR (Back-end)O "cérebro". Processa a lógica, autentica o usuário e busca informações.
 * ↔️ Consulta os dados

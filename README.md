@@ -8,6 +8,7 @@
   
 - Practice Test for Written Exams (ENADE Style): https://abre.ai/devapint-enade-style
 - Practice Test: https://share.gemini.google/xhf1JgXoVpcS
+- Immersion Podcasts: [IA_Podcasts_Prof_ClovesRocha](https://abre.ai/immersionpodcasts)
 
 - Docente: Prof. Mentor Cloves Rocha.
 - Discentes: 

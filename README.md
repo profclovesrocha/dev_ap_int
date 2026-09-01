@@ -9,10 +9,16 @@
 - Practice Test: https://share.gemini.google/xhf1JgXoVpcS
 - Immersion Podcasts: [IA_Podcasts_Prof_ClovesRocha](https://abre.ai/immersionpodcasts)
 # 🌐 INFOGRÁFICO: Desenvolvimento de Aplicações para Internet
-# 🗺️ Roadmap de AprendizagemEtapaFoco da FaseTecnologias
-Competências Desenvolvidas1. Estrutura e EstiloFront-end EstáticoHTML5 & CSS3Semântica web, acessibilidade, layouts responsivos (Flexbox/Grid).2. DinamismoLógica Client-sideJavaScript (ES6+)Manipulação da DOM, eventos, validação de formulários.3. IntegraçãoConsumo de DadosAPIs REST & JSONAssincronicidade (Async/Await), requisições HTTP (Fetch API).4. VersionamentoGestão de CódigoGit & GitHubCommits, branches, pull requests e trabalho colaborativo.5. Fundamentos Back-endLógica Server-sideNode.js ou PythonCriação de servidores básicos, rotas e regras de negócio.6. PublicaçãoDeployGitHub Pages/VercelColocar a aplicação web no ar para acesso público.
+# 🗺️ Roadmap de Aprendizagem Etapa Foco da Fase Tecnologias
+1. Competências Desenvolvidas1. Estrutura e EstiloFront-end Estático
+2. HTML5 & CSS3Semântica web, acessibilidade, layouts responsivos (Flexbox/Grid).
+3. DinamismoLógica Client-sideJavaScript (ES6+)Manipulação da DOM, eventos, validação de formulários.
+4. IntegraçãoConsumo de DadosAPIs REST & JSONAssincronicidade (Async/Await), requisições HTTP (Fetch API).
+5. Versionamento Gestão de CódigoGit & GitHubCommits, branches, pull requests e trabalho colaborativo.
+6. Fundamentos Back-end Lógica Server-sideNode.js ou PythonCriação de servidores básicos, rotas e regras de negócio.
+7. Publicação Deploy GitHub Pages/VercelColocar a aplicação web no ar para acesso público.
 # ⚙️ Como Funciona uma Aplicação Web? (A Arquitetura)
-- 🧑‍💻 CLIENTE (Navegador/Front-end)
+* 🧑‍💻 CLIENTE (Navegador/Front-end)
 * É a interface. Onde o usuário clica, digita e visualiza os dados (HTML/CSS/JS).
 * ⬇️ Faz uma requisição HTTP (GET, POST, PUT, DELETE)☁️ A INTERNET (APIs)A ponte de comunicação. Transporte de dados via JSON.
 * ⬇️ Entrega a requisição

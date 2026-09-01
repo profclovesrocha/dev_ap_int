@@ -10,18 +10,19 @@
 - Immersion Podcasts: [IA_Podcasts_Prof_ClovesRocha](https://abre.ai/immersionpodcasts)
 # 🌐 INFOGRÁFICO: Desenvolvimento de Aplicações para Internet
 # 🗺️ Roadmap de Aprendizagem Etapa Foco da Fase Tecnologias
-1. Competências Desenvolvidas1. Estrutura e EstiloFront-end Estático
+* Competências Desenvolvidas
+1. Estrutura e EstiloFront-end Estático.
 2. HTML5 & CSS3Semântica web, acessibilidade, layouts responsivos (Flexbox/Grid).
-3. DinamismoLógica Client-sideJavaScript (ES6+)Manipulação da DOM, eventos, validação de formulários.
-4. IntegraçãoConsumo de DadosAPIs REST & JSONAssincronicidade (Async/Await), requisições HTTP (Fetch API).
-5. Versionamento Gestão de CódigoGit & GitHubCommits, branches, pull requests e trabalho colaborativo.
-6. Fundamentos Back-end Lógica Server-sideNode.js ou PythonCriação de servidores básicos, rotas e regras de negócio.
-7. Publicação Deploy GitHub Pages/VercelColocar a aplicação web no ar para acesso público.
+3. Dinamismo Lógica Client-side JavaScript (ES6+) Manipulação da DOM, eventos, validação de formulários.
+4. Integração Consumo de Dados APIs REST & JSON Assincronicidade (Async/Await), requisições HTTP (Fetch API).
+6. Versionamento Gestão de CódigoGit & GitHubCommits, branches, pull requests e trabalho colaborativo.
+7. Fundamentos Back-end Lógica Server-side Node.js ou Python Criação de servidores básicos, rotas e regras de negócio.
+8. Publicação Deploy GitHub Pages/VercelColocar a aplicação web no ar para acesso público.
 # ⚙️ Como Funciona uma Aplicação Web? (A Arquitetura)
 * 🧑‍💻 CLIENTE (Navegador/Front-end)
 * É a interface. Onde o usuário clica, digita e visualiza os dados (HTML/CSS/JS).
 * ⬇️ Faz uma requisição HTTP (GET, POST, PUT, DELETE)☁️ A INTERNET (APIs)A ponte de comunicação. Transporte de dados via JSON.
-* ⬇️ Entrega a requisição
+* ⬇️ Entrega da requisição
 * 🖥️ SERVIDOR (Back-end)O "cérebro". Processa a lógica, autentica o usuário e busca informações.
 * ↔️ Consulta os dados
 * 🗄️ BANCO DE DADOSA memória. Onde as informações são armazenadas permanentemente (SQL/NoSQL).
@@ -86,5 +87,5 @@
 <img width="4582" height="6437" alt="NotebookLM Mind Map (11)" src="https://github.com/user-attachments/assets/e00c7e7f-ecaa-4a56-83de-debf0dca9892" />
 
 # Roadmap - Course_Blueprint
-
+...
 

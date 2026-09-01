@@ -17,7 +17,7 @@
 4. Integração Consumo de Dados APIs REST & JSON Assincronicidade (Async/Await), requisições HTTP (Fetch API).
 6. Versionamento Gestão de CódigoGit & GitHubCommits, branches, pull requests e trabalho colaborativo.
 7. Fundamentos Back-end Lógica Server-side Node.js ou Python Criação de servidores básicos, rotas e regras de negócio.
-8. Publicação Deploy GitHub Pages/VercelColocar a aplicação web no ar para acesso público.
+8. Publicação Deploy GitHub Pages/Vercel - Colocar a aplicação web no ar para acesso público.
 # ⚙️ Como Funciona uma Aplicação Web? (A Arquitetura)
 * 🧑‍💻 CLIENTE (Navegador/Front-end)
 * É a interface. Onde o usuário clica, digita e visualiza os dados (HTML/CSS/JS).

@@ -71,6 +71,7 @@
 - Vanessa Marcela do Nascimento Moreira
 - Luiz Davi Nunes
 - Victor Dias do Carmo
+- Pedro Lucas Domingos
 
 # GROUPS / PROJECTS / CHALLENGES
 1. Sofia M, João C, G Luciano, Thiago C, Victor D, Diego B

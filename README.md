@@ -74,6 +74,7 @@
 - Pedro Lucas Domingos
 - Eduardo Willian
 - Carlos Henrique Rocha de Abreu
+- Pedro Madson Queiroz Aragão Mota
 
 # GROUPS / PROJECTS / CHALLENGES
 1. Sofia M, João C, G Luciano, Thiago C, Victor D, Diego B

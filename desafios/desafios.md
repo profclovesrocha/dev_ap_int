@@ -1,7 +1,7 @@
 # Vídeos aulas de apoio extra
-1. https://youtu.be/YF0SvIzxd-M?is=blpouvhEZA_OhISQ
-2. https://youtu.be/TrDBJ9HO3yE?si=nL40ktg9r5cEfTMU
-3. 
+1. Assita e siga o passo a passo: https://youtu.be/YF0SvIzxd-M?is=blpouvhEZA_OhISQ
+2. Assista e siga o passo a passo: https://youtu.be/TrDBJ9HO3yE?si=nL40ktg9r5cEfTMU
+   
 # Prática Orientada: Transformando sua Página
 
 - Agora é a hora de colocar a mão na massa e aplicar todo o conhecimento adquirido! Usaremos a página HTML que vocês criaram na semana anterior como base para essa prática.

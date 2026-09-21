@@ -1,6 +1,10 @@
+# Vídeos aulas de apoio extra
+1. https://youtu.be/YF0SvIzxd-M?is=blpouvhEZA_OhISQ
+2. https://youtu.be/TrDBJ9HO3yE?si=nL40ktg9r5cEfTMU
+3. 
 # Prática Orientada: Transformando sua Página
 
-Agora é a hora de colocar a mão na massa e aplicar todo o conhecimento adquirido! Usaremos a página HTML que vocês criaram na semana anterior como base para essa prática.
+- Agora é a hora de colocar a mão na massa e aplicar todo o conhecimento adquirido! Usaremos a página HTML que vocês criaram na semana anterior como base para essa prática.
 
 # Exercício 1: Estilização Básica
 Abra seu arquivo HTML da semana anterior e crie um arquivo styles.css para o CSS externo.

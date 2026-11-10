@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover, interactive-widget=resizes-content"
+    />
+    <meta
+      name="description"
+      content="BateriaLimpa: informação e pontos de coleta para o descarte responsável de lixo eletrônico em Olinda."
+    />
+    <meta name="theme-color" content="#f6f6ef" />
+    <meta name="color-scheme" content="light dark" />
+    <title>BateriaLimpa | Reciclagem de lixo eletrônico</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/src/index.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo" data-pt="Pular para o conteúdo" data-en="Skip to content">Pular para o conteúdo</a>
+
+    <header class="site-header" id="cabecalho">
+      <div class="nav-wrap">
+        <a class="brand" href="#inicio" aria-label="BateriaLimpa — Início">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 44 44" fill="none">
+              <rect x="7.5" y="8.5" width="26" height="27" rx="7" stroke="currentColor" stroke-width="2.4" />
+              <path d="M34 17h3a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2h-3" stroke="currentColor" stroke-width="2.4" />
+              <path d="M15 27.5c0-7 4.8-11 12.5-11 0 7.2-3.5 12-9 12-2 0-3.5-1.2-3.5-3.2" fill="currentColor" opacity=".22" />
+              <path d="M14 31c2.2-6 5.8-9.8 11.5-12.2M17.5 28.5c5.5.4 9.4-4.4 10-12" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" />
+              <circle cx="12.5" cy="13.5" r="1.5" fill="currentColor" />
+            </svg>
+          </span>
+          <span>Bateria<strong>Limpa</strong></span>
+        </a>
+
+        <nav class="main-nav" id="mobile-navigation" aria-label="Navegação principal">
+          <a href="#perigos" data-pt="O problema" data-en="The problem">O problema</a>
+          <a href="#logistica" data-pt="Logística reversa" data-en="Reverse logistics">Logística reversa</a>
+          <a href="#processos" data-pt="Como funciona" data-en="How it works">Como funciona</a>
+          <a href="#pontos" data-pt="Pontos em Olinda" data-en="Olinda locations">Pontos em Olinda</a>
+          <a href="#sugerir" data-pt="Sugerir ponto" data-en="Suggest a location">Sugerir ponto</a>
+        </nav>
+
+        <a class="header-cta" href="#pontos"><span data-icon="pin"></span><span data-pt="Encontrar um ponto" data-en="Find a location">Encontrar um ponto</span></a>
+
+        <div class="language-switch" role="group" aria-label="Selecionar idioma">
+          <span data-icon="globe"></span>
+          <button class="is-active" type="button" data-language="pt-BR" aria-pressed="true">PT</button>
+          <span aria-hidden="true">/</span>
+          <button type="button" data-language="en-US" aria-pressed="false">EN</button>
+        </div>
+
+        <button class="theme-toggle" type="button" aria-label="Ativar modo escuro" aria-pressed="false">
+          <span class="theme-toggle-track" data-icon="moon" aria-hidden="true"></span>
+          <span class="theme-toggle-label" data-pt="Claro" data-en="Light">Claro</span>
+        </button>
+
+        <button
+          class="menu-button"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobile-navigation"
+          aria-label="Abrir menu"
+        >
+          <span data-icon="menu"></span>
+        </button>
+      </div>
+      <div class="scroll-progress" aria-hidden="true"><span></span></div>
+    </header>
+
+    <main id="conteudo">
+      <section class="hero" id="inicio">
+        <div class="hero-glow"></div>
+        <div class="hero-content">
+          <div class="hero-copy">
+            <span class="eyebrow-pill"><span data-icon="leaf"></span><span data-pt="Reciclagem que transforma" data-en="Recycling that transforms">Reciclagem que transforma</span></span>
+            <h1>
+              <span data-pt="O fim de uma bateria pode ser um " data-en="The end of a battery can be a ">O fim de uma bateria pode ser um </span>
+              <em data-pt="novo começo." data-en="new beginning.">novo começo.</em>
+            </h1>
+            <p
+              data-pt="Transforme resíduos eletrônicos em novos recursos. Descarte corretamente, proteja o planeta e mova a economia circular."
+              data-en="Turn electronic waste into new resources. Dispose of it properly, protect the planet, and drive the circular economy."
+            >Transforme resíduos eletrônicos em novos recursos. Descarte corretamente, proteja o planeta e mova a economia circular.</p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#sugerir"><span data-pt="Sugerir ponto de coleta" data-en="Suggest a collection location">Sugerir ponto de coleta</span><span data-icon="arrow"></span></a>
+              <a class="text-link" href="#perigos"><span data-pt="Entenda o impacto" data-en="Understand the impact">Entenda o impacto</span><span data-icon="chevron"></span></a>
+            </div>
+            <div class="trust-row">
+              <span><span data-icon="shield"></span><span data-pt="Destinação segura" data-en="Safe disposal">Destinação segura</span></span>
+              <span><span data-icon="recycle"></span><span data-pt="Economia circular" data-en="Circular economy">Economia circular</span></span>
+            </div>
+          </div>
+
+          <div class="hero-visual" role="img" aria-label="Bateria integrada ao ciclo da natureza">
+            <div class="orbit orbit-one"><span></span></div>
+            <div class="battery-illustration">
+              <div class="battery-cap"></div>
+              <div class="battery-body">
+                <div class="battery-shine"></div>
+                <span data-icon="leaf" class="battery-leaf"></span>
+                <span>100%</span>
+                <small data-pt="energia circular" data-en="circular energy">energia circular</small>
+              </div>
+            </div>
+            <div class="floating-card floating-card-top">
+              <span class="float-icon" data-icon="drop"></span>
+              <div><strong data-pt="Água protegida" data-en="Protected water">Água protegida</strong><small data-pt="sem metais pesados" data-en="free of heavy metals">sem metais pesados</small></div>
+            </div>
+            <div class="floating-card floating-card-bottom">
+              <span class="float-icon" data-icon="recycle"></span>
+              <div><strong data-pt="95% recuperado" data-en="95% recovered">95% recuperado</strong><small data-pt="volta para a indústria" data-en="returns to industry">volta para a indústria</small></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="facts-bar" aria-label="Resultados da reciclagem">
+        <div><strong>95%</strong><span data-pt="de metais estratégicos podem ser recuperados" data-en="of strategic metals can be recovered">de metais estratégicos podem ser recuperados</span></div>
+        <div><strong>3</strong><span data-pt="metais tóxicos exigem descarte responsável" data-en="toxic metals require responsible disposal">metais tóxicos exigem descarte responsável</span></div>
+        <div><strong data-pt="1 ciclo" data-en="1 cycle">1 ciclo</strong><span data-pt="do consumo ao retorno para a indústria" data-en="from consumption back to industry">do consumo ao retorno para a indústria</span></div>
+      </section>
+
+      <section class="impact-section" aria-labelledby="impact-title">
+        <div class="section-heading">
+          <span class="section-kicker" data-pt="Por que isso importa" data-en="Why this matters">Por que isso importa</span>
+          <h2 id="impact-title"><span data-pt="Uma pequena escolha." data-en="One small choice.">Uma pequena escolha.</span><br /><em data-pt="Um impacto enorme." data-en="One huge impact.">Um impacto enorme.</em></h2>
+          <p data-pt="Conheça a jornada que transforma um risco ambiental em matéria-prima para o futuro." data-en="Discover the journey that turns an environmental risk into raw material for the future.">Conheça a jornada que transforma um risco ambiental em matéria-prima para o futuro.</p>
+        </div>
+        <div class="card-grid">
+          <article class="info-card tone-warning" id="perigos">
+            <div class="card-top"><span class="card-icon" data-icon="soil"></span><span class="card-number">01</span></div>
+            <span class="card-kicker" data-pt="Impacto ambiental" data-en="Environmental impact">Impacto ambiental</span>
+            <h3 data-pt="O perigo do descarte incorreto" data-en="The danger of improper disposal">O perigo do descarte incorreto</h3>
+            <p data-pt="No lixo comum, baterias liberam metais pesados que atravessam o solo e alcançam nossa água." data-en="In regular trash, batteries release heavy metals that seep through the soil and reach our water.">No lixo comum, baterias liberam metais pesados que atravessam o solo e alcançam nossa água.</p>
+            <div class="metal-list"><span>Hg <small data-pt="Mercúrio" data-en="Mercury">Mercúrio</small></span><span>Cd <small data-pt="Cádmio" data-en="Cadmium">Cádmio</small></span><span>Pb <small data-pt="Chumbo" data-en="Lead">Chumbo</small></span></div>
+          </article>
+          <article class="info-card tone-trust" id="logistica">
+            <div class="card-top"><span class="card-icon" data-icon="recycle"></span><span class="card-number">02</span></div>
+            <span class="card-kicker" data-pt="Responsabilidade compartilhada" data-en="Shared responsibility">Responsabilidade compartilhada</span>
+            <h3 data-pt="Logística reversa" data-en="Reverse logistics">Logística reversa</h3>
+            <p data-pt="Fabricantes e distribuidores recolhem resíduos pós-consumo e garantem a destinação adequada." data-en="Manufacturers and distributors collect post-consumer waste and ensure proper disposal.">Fabricantes e distribuidores recolhem resíduos pós-consumo e garantem a destinação adequada.</p>
+            <div class="flow"><span data-pt="Você descarta" data-en="You dispose">Você descarta</span><i></i><span data-pt="Nós coletamos" data-en="We collect">Nós coletamos</span><i></i><span data-pt="A indústria recicla" data-en="Industry recycles">A indústria recicla</span></div>
+          </article>
+          <article class="info-card tone-renewal" id="processos">
+            <div class="card-top"><span class="card-icon" data-icon="factory"></span><span class="card-number">03</span></div>
+            <span class="card-kicker" data-pt="Tecnologia circular" data-en="Circular technology">Tecnologia circular</span>
+            <h3 data-pt="Processos de extração" data-en="Extraction processes">Processos de extração</h3>
+            <p data-pt="A hidrometalurgia recupera materiais valiosos para que voltem à cadeia produtiva como novas baterias." data-en="Hydrometallurgy recovers valuable materials so they can return to production as new batteries.">A hidrometalurgia recupera materiais valiosos para que voltem à cadeia produtiva como novas baterias.</p>
+            <div class="recovery"><strong data-pt="até 95%" data-en="up to 95%">até 95%</strong><span data-pt="de cobalto, níquel e lítio recuperados" data-en="of cobalt, nickel and lithium recovered">de cobalto, níquel e lítio recuperados</span></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="journey-section" aria-labelledby="journey-title">
+        <div class="journey-heading">
+          <span class="section-kicker" data-pt="Do descarte ao reuso" data-en="From disposal to reuse">Do descarte ao reuso</span>
+          <h2 id="journey-title"><span data-pt="Uma jornada simples, com " data-en="A simple journey with ">Uma jornada simples, com </span><em data-pt="impacto mensurável." data-en="measurable impact.">impacto mensurável.</em></h2>
+          <p data-pt="Cada etapa mantém materiais perigosos fora do ambiente e preserva recursos já extraídos da natureza." data-en="Each stage keeps hazardous materials out of the environment and preserves resources already extracted from nature.">Cada etapa mantém materiais perigosos fora do ambiente e preserva recursos já extraídos da natureza.</p>
+        </div>
+        <ol class="journey-list">
+          <li><span>01</span><div><strong data-pt="Entrega consciente" data-en="Responsible drop-off">Entrega consciente</strong><p data-pt="O resíduo chega separado e protegido ao ponto de coleta." data-en="Waste arrives separated and protected at the collection location.">O resíduo chega separado e protegido ao ponto de coleta.</p></div></li>
+          <li><span>02</span><div><strong data-pt="Triagem técnica" data-en="Technical sorting">Triagem técnica</strong><p data-pt="Cada item é classificado por química, risco e possibilidade de reuso." data-en="Each item is classified by chemistry, risk, and reuse potential.">Cada item é classificado por química, risco e possibilidade de reuso.</p></div></li>
+          <li><span>03</span><div><strong data-pt="Extração segura" data-en="Safe extraction">Extração segura</strong><p data-pt="Processos controlados separam lítio, níquel, cobalto e outros materiais." data-en="Controlled processes separate lithium, nickel, cobalt, and other materials.">Processos controlados separam lítio, níquel, cobalto e outros materiais.</p></div></li>
+          <li><span>04</span><div><strong data-pt="Novo ciclo" data-en="A new cycle">Novo ciclo</strong><p data-pt="A matéria-prima recuperada volta para novos produtos e baterias." data-en="Recovered raw material returns to new products and batteries.">A matéria-prima recuperada volta para novos produtos e baterias.</p></div></li>
+        </ol>
+        <aside class="prep-card">
+          <span class="prep-icon" data-icon="shield"></span>
+          <span class="section-kicker" data-pt="Antes de levar" data-en="Before you go">Antes de levar</span>
+          <h3 data-pt="Prepare seu eletrônico" data-en="Prepare your electronics">Prepare seu eletrônico</h3>
+          <ul>
+            <li><span data-icon="check"></span><span data-pt="Apague seus dados pessoais" data-en="Erase your personal data">Apague seus dados pessoais</span></li>
+            <li><span data-icon="check"></span><span data-pt="Separe cabos e acessórios" data-en="Separate cables and accessories">Separe cabos e acessórios</span></li>
+            <li><span data-icon="check"></span><span data-pt="Isole terminais de baterias" data-en="Tape battery terminals">Isole terminais de baterias</span></li>
+            <li><span data-icon="check"></span><span data-pt="Não desmonte nem perfure" data-en="Do not dismantle or puncture">Não desmonte nem perfure</span></li>
+          </ul>
+        </aside>
+      </section>
+
+      <section class="points-section" id="pontos" aria-labelledby="points-title">
+        <div class="points-heading">
+          <div>
+            <span class="section-kicker" data-pt="Descarte perto de você" data-en="Dispose near you">Descarte perto de você</span>
+            <h2 id="points-title"><span data-pt="Pontos fixos em " data-en="Fixed locations in ">Pontos fixos em </span><em>Olinda — PE.</em></h2>
+            <p data-pt="Encontre uma opção próxima, confira o que cada local recebe e planeje seu descarte com segurança." data-en="Find a nearby option, check what each location accepts, and plan your disposal safely.">Encontre uma opção próxima, confira o que cada local recebe e planeje seu descarte com segurança.</p>
+          </div>
+          <label class="point-search">
+            <span class="sr-only" data-pt="Buscar ponto por nome, bairro ou endereço" data-en="Search by name, neighborhood, or address">Buscar ponto</span>
+            <span data-icon="search"></span>
+            <input id="point-search" type="search" data-placeholder-pt="Busque por bairro ou local" data-placeholder-en="Search by neighborhood or place" placeholder="Busque por bairro ou local" />
+          </label>
+        </div>
+        <p class="search-feedback" id="search-feedback" role="status" aria-live="polite">3 pontos encontrados</p>
+        <div class="points-grid" id="points-grid">
+          <article class="point-card" data-search="patteo casa caiada rua carmelita">
+            <div class="point-card-top"><span class="point-pin point-pin-1" data-icon="pin"></span><span class="point-status"><i></i><span data-pt="Ponto fixo" data-en="Fixed location">Ponto fixo</span></span></div>
+            <span class="point-neighborhood">Casa Caiada</span><h3>Ponto BateriaLimpa Patteo</h3>
+            <p class="point-address"><span data-icon="map"></span> Rua Carmelita Muniz de Araújo, 225</p>
+            <p class="point-hours"><span data-icon="clock"></span><span data-pt="Seg–sáb, 10h às 22h" data-en="Mon–Sat, 10 AM–10 PM">Seg–sáb, 10h às 22h</span></p>
+            <div class="accepted-items"><span data-pt="Pilhas" data-en="Batteries">Pilhas</span><span data-pt="Celulares" data-en="Cell phones">Celulares</span><span data-pt="Baterias portáteis" data-en="Portable batteries">Baterias portáteis</span></div>
+            <a class="point-link" href="https://www.google.com/maps/search/?api=1&query=Shopping%20Patteo%20Olinda%20PE" target="_blank" rel="noreferrer"><span data-pt="Abrir no mapa" data-en="Open map">Abrir no mapa</span><span data-icon="external"></span></a>
+          </article>
+          <article class="point-card" data-search="ecoestação peixinhos avenida presidente kennedy">
+            <div class="point-card-top"><span class="point-pin point-pin-2" data-icon="pin"></span><span class="point-status"><i></i><span data-pt="Ponto fixo" data-en="Fixed location">Ponto fixo</span></span></div>
+            <span class="point-neighborhood">Peixinhos</span><h3>Ecoestação Peixinhos</h3>
+            <p class="point-address"><span data-icon="map"></span> Avenida Presidente Kennedy, Peixinhos</p>
+            <p class="point-hours"><span data-icon="clock"></span><span data-pt="Seg–sáb, 8h às 17h" data-en="Mon–Sat, 8 AM–5 PM">Seg–sáb, 8h às 17h</span></p>
+            <div class="accepted-items"><span data-pt="Eletrônicos" data-en="Electronics">Eletrônicos</span><span data-pt="Cabos" data-en="Cables">Cabos</span><span data-pt="Pilhas e baterias" data-en="Batteries">Pilhas e baterias</span></div>
+            <a class="point-link" href="https://www.google.com/maps/search/?api=1&query=Ecoesta%C3%A7%C3%A3o%20Peixinhos%20Olinda%20PE" target="_blank" rel="noreferrer"><span data-pt="Abrir no mapa" data-en="Open map">Abrir no mapa</span><span data-icon="external"></span></a>
+          </article>
+          <article class="point-card" data-search="varadouro eufrásio barbosa sigismundo">
+            <div class="point-card-top"><span class="point-pin point-pin-3" data-icon="pin"></span><span class="point-status"><i></i><span data-pt="Ponto fixo" data-en="Fixed location">Ponto fixo</span></span></div>
+            <span class="point-neighborhood">Varadouro</span><h3>Ponto BateriaLimpa Varadouro</h3>
+            <p class="point-address"><span data-icon="map"></span> Av. Sigismundo Gonçalves, 580</p>
+            <p class="point-hours"><span data-icon="clock"></span><span data-pt="Ter–dom, 9h às 17h" data-en="Tue–Sun, 9 AM–5 PM">Ter–dom, 9h às 17h</span></p>
+            <div class="accepted-items"><span data-pt="Pilhas" data-en="Batteries">Pilhas</span><span data-pt="Carregadores" data-en="Chargers">Carregadores</span><span data-pt="Pequenos eletrônicos" data-en="Small electronics">Pequenos eletrônicos</span></div>
+            <a class="point-link" href="https://www.google.com/maps/search/?api=1&query=Mercado%20Eufr%C3%A1sio%20Barbosa%20Olinda%20PE" target="_blank" rel="noreferrer"><span data-pt="Abrir no mapa" data-en="Open map">Abrir no mapa</span><span data-icon="external"></span></a>
+          </article>
+        </div>
+        <div class="empty-points" id="empty-points" role="status" hidden>
+          <span data-icon="search"></span><h3 data-pt="Nenhum ponto encontrado" data-en="No locations found">Nenhum ponto encontrado</h3>
+          <p data-pt="Tente outro bairro ou indique um novo local no formulário abaixo." data-en="Try another neighborhood or suggest a new place using the form below.">Tente outro bairro ou indique um novo local no formulário abaixo.</p>
+          <button type="button" id="clear-search" data-pt="Limpar busca" data-en="Clear search">Limpar busca</button>
+        </div>
+        <p class="points-note"><span data-icon="shield"></span><span data-pt="Confirme o horário e a capacidade de recebimento antes de se deslocar." data-en="Confirm opening hours and collection capacity before you go.">Confirme o horário e a capacidade de recebimento antes de se deslocar.</span></p>
+      </section>
+
+      <section class="faq-section" aria-labelledby="faq-title">
+        <div class="faq-heading">
+          <span class="section-kicker" data-pt="Informação prática" data-en="Practical information">Informação prática</span>
+          <h2 id="faq-title" data-pt="Dúvidas antes de descartar." data-en="Questions before disposal.">Dúvidas antes de descartar.</h2>
+          <p data-pt="Respostas rápidas para fazer a escolha certa com segurança." data-en="Quick answers to help you make the right choice safely.">Respostas rápidas para fazer a escolha certa com segurança.</p>
+        </div>
+        <div class="faq-list">
+          <details open><summary data-pt="O descarte tem algum custo?" data-en="Is there a disposal fee?">O descarte tem algum custo?</summary><p data-pt="Não. A entrega de pilhas, baterias e pequenos eletrônicos nos pontos indicados é gratuita." data-en="No. Dropping off batteries and small electronics at the listed locations is free.">Não. A entrega de pilhas, baterias e pequenos eletrônicos nos pontos indicados é gratuita.</p></details>
+          <details><summary data-pt="Preciso apagar meus dados antes?" data-en="Should I erase my data first?">Preciso apagar meus dados antes?</summary><p data-pt="Sim. Faça backup, encerre suas contas e restaure o aparelho para as configurações de fábrica." data-en="Yes. Back up your files, sign out of your accounts, and restore the device to factory settings.">Sim. Faça backup, encerre suas contas e restaure o aparelho para as configurações de fábrica.</p></details>
+          <details><summary data-pt="Como transportar uma bateria danificada?" data-en="How should I carry a damaged battery?">Como transportar uma bateria danificada?</summary><p data-pt="Não perfure. Isole os terminais com fita, use um recipiente não metálico e avise a equipe." data-en="Do not puncture it. Tape the terminals, use a non-metal container, and notify the staff.">Não perfure. Isole os terminais com fita, use um recipiente não metálico e avise a equipe.</p></details>
+          <details><summary data-pt="O que acontece depois da coleta?" data-en="What happens after collection?">O que acontece depois da coleta?</summary><p data-pt="Os itens são triados, desmontados e enviados a operadores licenciados. Os materiais retornam à indústria." data-en="Items are sorted, dismantled, and sent to licensed operators. Materials return to industry.">Os itens são triados, desmontados e enviados a operadores licenciados. Os materiais retornam à indústria.</p></details>
+        </div>
+      </section>
+
+      <section class="form-section" id="sugerir">
+        <div class="form-aside">
+          <span class="section-kicker light" data-pt="Faça parte da mudança" data-en="Be part of the change">Faça parte da mudança</span>
+          <h2><span data-pt="Conhece um lugar que pode virar " data-en="Know a place that could become a ">Conhece um lugar que pode virar </span><em data-pt="ponto de coleta?" data-en="collection location?">ponto de coleta?</em></h2>
+          <p data-pt="Nossa equipe vai avaliar a indicação e ajudar a aproximar o descarte correto dos bairros de Olinda." data-en="Our team will review your suggestion and help bring proper disposal closer to Olinda's neighborhoods.">Nossa equipe vai avaliar a indicação e ajudar a aproximar o descarte correto dos bairros de Olinda.</p>
+          <div class="step-list">
+            <div><span>1</span><p><strong data-pt="Você indica" data-en="You suggest">Você indica</strong><small data-pt="Preencha os dados do local" data-en="Fill in the location details">Preencha os dados do local</small></p></div>
+            <div><span>2</span><p><strong data-pt="Nós avaliamos" data-en="We review">Nós avaliamos</strong><small data-pt="Entramos em contato com o ponto" data-en="We contact the location">Entramos em contato com o ponto</small></p></div>
+            <div><span>3</span><p><strong data-pt="A rede cresce" data-en="The network grows">A rede cresce</strong><small data-pt="Mais pessoas descartam melhor" data-en="More people dispose responsibly">Mais pessoas descartam melhor</small></p></div>
+          </div>
+        </div>
+        <div class="form-card">
+          <div class="success-state" id="success-state" role="status" aria-live="polite" tabindex="-1" hidden>
+            <span data-icon="check"></span>
+            <h3 data-pt="Indicação recebida!" data-en="Suggestion received!">Indicação recebida!</h3>
+            <p data-pt="Obrigado por ajudar a construir uma cidade mais limpa. Analisaremos o local sugerido." data-en="Thank you for helping build a cleaner city. We will review the suggested location.">Obrigado por ajudar a construir uma cidade mais limpa. Analisaremos o local sugerido.</p>
+            <button class="button button-secondary" id="new-suggestion" type="button" data-pt="Sugerir outro ponto" data-en="Suggest another location">Sugerir outro ponto</button>
+          </div>
+          <form id="suggestion-form">
+            <div class="form-heading"><span data-icon="map"></span><div><h3 data-pt="Sugira um novo ponto em Olinda" data-en="Suggest a new location in Olinda">Sugira um novo ponto em Olinda</h3><p data-pt="Leva menos de 2 minutos." data-en="It takes less than 2 minutes.">Leva menos de 2 minutos.</p></div></div>
+            <div class="field-row">
+              <label><span data-pt="Seu nome" data-en="Your name">Seu nome</span><div class="input-wrap"><span data-icon="user"></span><input name="name" required minlength="3" autocomplete="name" data-placeholder-pt="Como podemos te chamar?" data-placeholder-en="What should we call you?" placeholder="Como podemos te chamar?" /></div></label>
+              <label><span data-pt="Seu e-mail" data-en="Your email">Seu e-mail</span><div class="input-wrap"><span data-icon="mail"></span><input name="email" type="email" required autocomplete="email" placeholder="voce@email.com" /></div></label>
+            </div>
+            <div class="field-row">
+              <label><span data-pt="Nome do local sugerido" data-en="Suggested place name">Nome do local sugerido</span><div class="input-wrap"><span data-icon="map"></span><input name="place" required minlength="3" data-placeholder-pt="Ex.: mercado, escola ou loja" data-placeholder-en="E.g. market, school, or store" placeholder="Ex.: mercado, escola ou loja" /></div></label>
+              <label><span data-pt="Bairro em Olinda" data-en="Neighborhood in Olinda">Bairro em Olinda</span><div class="input-wrap"><span data-icon="pin"></span><input name="neighborhood" required minlength="3" autocomplete="address-level3" placeholder="Ex.: Casa Caiada" /></div></label>
+            </div>
+            <label><span data-pt="Telefone" data-en="Phone">Telefone</span><div class="input-wrap"><span data-icon="phone"></span><input name="phone" type="tel" required pattern="[\d\s()+-]{10,}" autocomplete="tel" placeholder="(00) 00000-0000" /></div></label>
+            <label><span data-pt="Endereço do ponto indicado" data-en="Suggested location address">Endereço do ponto indicado</span><div class="input-wrap"><span data-icon="pin"></span><input name="address" required minlength="8" autocomplete="street-address" data-placeholder-pt="Rua e número, Olinda — PE" data-placeholder-en="Street and number, Olinda — PE" placeholder="Rua e número, Olinda — PE" /></div></label>
+            <button class="button button-submit" type="submit"><span data-pt="Enviar indicação" data-en="Submit suggestion">Enviar indicação</span><span data-icon="arrow"></span></button>
+            <small class="privacy"><span data-icon="shield"></span><span data-pt="Seus dados serão usados apenas para validar esta indicação." data-en="Your data will only be used to validate this suggestion.">Seus dados serão usados apenas para validar esta indicação.</span></small>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <a class="brand footer-brand" href="#inicio"><span class="brand-mark" aria-hidden="true"><span data-icon="leaf"></span></span><span>Bateria<strong>Limpa</strong></span></a>
+      <p data-pt="Resíduo no lugar certo. Futuro no rumo certo." data-en="Waste in the right place. A future on the right track.">Resíduo no lugar certo. Futuro no rumo certo.</p>
+      <span>© <span id="year"></span> BateriaLimpa</span>
+    </footer>
+
+    <button class="back-to-top" type="button" aria-label="Voltar ao início">
+      <span data-icon="arrow" aria-hidden="true"></span>
+      <span class="sr-only" data-pt="Voltar ao início" data-en="Back to top">Voltar ao início</span>
+    </button>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

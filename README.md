@@ -85,7 +85,7 @@
 4.  Lua Barros, Camila Silva, Vanessa Marcela, Camila Fernandes, Bruno Oliveira, Matheus Eduardo, Willian Henrique, Gabriel Vereda
 5. David, Eduardo, Carlos Henrique, Guilherme Kauã, Davi, Miguel, Rayanne, Guilherme Nunes, Thiago G, Kauã H, Miguel P
 6. Marcos
-7. Pedro J, Willian H, Yves U
+7. Pedro J, Yves U
 8. Arthur,...
 9. ?
 10. ?

@@ -84,11 +84,10 @@
 3. Ana Luísa, Maria Eduarda, Rebeca Souza e Tales;
 4.  Lua Barros, Camila Silva, Vanessa Marcela, Camila Fernandes, Bruno Oliveira, Matheus Eduardo, Willian Henrique, Gabriel Vereda
 5. David, Carlos Henrique, Guilherme Kauã, Davi, Miguel, Rayanne, Thiago G, Kauã H e Miguel P;
-6. Marcos
+6. Marcos,...
 7. Pedro J, Yves U
-8. Arthur,...
-9. ?
-10. ?
+8. Arthur, Victor Hugo, Lucas K, Antony e Átila.
+
 
 # Mind Map
 <img width="4582" height="6437" alt="NotebookLM Mind Map (11)" src="https://github.com/user-attachments/assets/e00c7e7f-ecaa-4a56-83de-debf0dca9892" />

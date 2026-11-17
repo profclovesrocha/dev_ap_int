@@ -81,7 +81,7 @@
 # GROUPS / PROJECTS / CHALLENGES
 1. Sofia M, João C, G Luciano, Thiago C, Victor D, Diego B
 2. Mateus José, Richarlyson Lucas, Jorge Henrique, João Carlos, Pedro Lucas, Vitor Gabriel de Souza, Walter Rangel;
-3. Ana Luísa,...
+3. Ana Luísa, Maria Eduarda, Rebeca Souza e Tales;
 4.  Lua Barros, Camila Silva, Vanessa Marcela, Camila Fernandes, Bruno Oliveira, Matheus Eduardo, Willian Henrique, Gabriel Vereda
 5. David, Eduardo, Carlos Henrique, Guilherme Kauã, Davi, Miguel, Rayanne, Guilherme Nunes, Thiago G, Kauã H, Miguel P
 6. Marcos

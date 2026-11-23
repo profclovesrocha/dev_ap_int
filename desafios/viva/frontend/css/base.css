@@ -112,3 +112,34 @@ footer {
   font-size: 0.9rem;
   border-top: 1px solid #d9cfe3;
 }
+
+/* 9. Botão de saída rápida: sempre visível no canto da tela */
+.saida-rapida {
+  position: fixed;
+  top: 0.5rem;
+  right: 0.5rem;
+  z-index: 1000;
+  padding: 0.75rem 1rem;
+  font: inherit;
+  font-weight: 700;
+  color: var(--cor-texto);
+  background-color: var(--cor-destaque);
+  border: 2px solid var(--cor-texto);
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.saida-rapida:hover {
+  background-color: #ffc933;
+}
+
+.saida-rapida:focus-visible {
+  outline: 3px solid var(--cor-texto);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 6px var(--cor-branco);
+}
+
+/* Evita que o título fique por baixo do botão */
+header h1 {
+  padding-right: 9rem;
+}

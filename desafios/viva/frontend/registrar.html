@@ -4,8 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Registrar um problema — VIVA</title>
-    <link rel="stylesheet" href="css/base.css">
-      <script src="js/saida-rapida.js" defer></script>
+  <link rel="stylesheet" href="css/base.css">
+  <script src="js/saida-rapida.js" defer></script>
+  <script src="js/registrar.js" defer></script>
 </head>
 <body>
   <header>
@@ -25,7 +26,38 @@
 
   <main>
     <h2>Registrar um problema de segurança</h2>
-    <p>Em construção: formulário para comunicar problemas de segurança no território.</p>
+    <p>Use este formulário para comunicar problemas de segurança no seu bairro, como rua mal iluminada ou local abandonado.</p>
+    <p class="aviso"><strong>Não escreva nomes, telefones, e-mails nem endereços exatos.</strong> O VIVA não é um serviço de emergência: em risco imediato, ligue 190.</p>
+
+    <form id="form-registro" novalidate>
+      <div class="campo">
+        <label for="bairro">Bairro</label>
+        <input type="text" id="bairro" name="bairro" autocomplete="off" aria-describedby="erro-bairro">
+        <p class="erro" id="erro-bairro"></p>
+      </div>
+
+      <div class="campo">
+        <label for="categoria">Tipo de problema</label>
+        <select id="categoria" name="categoria" aria-describedby="erro-categoria">
+          <option value="">Selecione...</option>
+          <option value="iluminacao">Iluminação deficiente</option>
+          <option value="abandono">Local abandonado ou perigoso</option>
+          <option value="policiamento">Falta de policiamento</option>
+          <option value="transporte">Ponto de ônibus ou transporte inseguro</option>
+          <option value="outro">Outro</option>
+        </select>
+        <p class="erro" id="erro-categoria"></p>
+      </div>
+
+      <div class="campo">
+        <label for="descricao">Descreva o problema</label>
+        <textarea id="descricao" name="descricao" rows="5" maxlength="500" aria-describedby="erro-descricao"></textarea>
+        <p class="erro" id="erro-descricao"></p>
+      </div>
+
+      <button type="submit" class="botao">Enviar registro</button>
+      <p id="mensagem-sucesso" role="status"></p>
+    </form>
   </main>
 
   <footer>

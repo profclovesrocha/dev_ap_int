@@ -143,3 +143,73 @@ footer {
 header h1 {
   padding-right: 9rem;
 }
+/* 10. Formulário */
+.aviso {
+  padding: 0.75rem 1rem;
+  background-color: #fff3cd;
+  border-left: 6px solid var(--cor-destaque);
+  border-radius: 0.5rem;
+}
+
+.campo {
+  margin-bottom: 1.25rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-weight: 700;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 0.75rem;
+  font: inherit;
+  color: var(--cor-texto);
+  background-color: var(--cor-branco);
+  border: 2px solid #8a7a99;
+  border-radius: 0.5rem;
+}
+
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--cor-destaque);
+  outline-offset: 2px;
+}
+
+[aria-invalid="true"] {
+  border-color: var(--cor-alerta);
+}
+
+.erro {
+  margin: 0.25rem 0 0;
+  color: var(--cor-alerta);
+  font-weight: 700;
+}
+
+.erro:not(:empty)::before {
+  content: "Atenção: ";
+}
+
+.botao {
+  padding: 0.75rem 1.5rem;
+  font: inherit;
+  font-weight: 700;
+  color: var(--cor-branco);
+  background-color: var(--cor-primaria);
+  border: 2px solid var(--cor-primaria);
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.botao:hover {
+  background-color: var(--cor-primaria-clara);
+}
+
+.botao:focus-visible {
+  outline: 3px solid var(--cor-destaque);
+  outline-offset: 2px;
+}

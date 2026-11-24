@@ -9,6 +9,8 @@
 - Practice Test: https://share.gemini.google/xhf1JgXoVpcS
 - Immersion Podcasts: [IA_Podcasts_Prof_ClovesRocha](https://abre.ai/immersionpodcasts)
 - AVALIAR O DOCENTE: https://forms.gle/RQhogCvz14XVhdYJ7
+- Live Tech ⚠️ NÃO APAGUE! | EXTRA 01 🔴 LIVE 01 - Como trabalhar com Banco de Dados? da modelagem a implementação! https://www.youtube.com/live/r-jxUkxg2Zw?si=rRQ1QhsyLtqLKHKo
+- Live Cyber Data Base SQL SEGURO - EXTRA 02 🔴 LIVE 02 https://www.youtube.com/live/usQlMBfvsSQ?si=cR5onzxuF_bDnIST
 
 # 🗺️ Roadmap de Aprendizagem Etapa Foco da Fase Tecnologias
 * Competências Desenvolvidas

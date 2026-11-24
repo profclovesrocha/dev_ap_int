@@ -29,7 +29,11 @@
 * ⬇️ Entrega da requisição
 * 🖥️ SERVIDOR (Back-end)O "cérebro". Processa a lógica, autentica o usuário e busca informações.
 * ↔️ Consulta os dados
-* 🗄️ BANCO DE DADOSA memória. Onde as informações são armazenadas permanentemente (SQL/NoSQL).
+* 🗄️ BANCO DE DADOS - A memória. Onde as informações são armazenadas permanentemente (SQL/NoSQL).
+
+# PERSONA DO PROJETO FINAL
+![Uploading Gemini_Generated_Image_31mcgv31mcgv31mc.jpeg…]()
+
 
 # 🎯 Checklist de Sucesso do Aluno (2026.2)
 - [ ] Ter uma conta ativa no GitHub e dominar comandos básicos do Git.

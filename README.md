@@ -32,7 +32,8 @@
 * 🗄️ BANCO DE DADOS - A memória. Onde as informações são armazenadas permanentemente (SQL/NoSQL).
 
 # PERSONA DO PROJETO FINAL
-![Uploading Gemini_Generated_Image_31mcgv31mcgv31mc.jpeg…]()
+<img width="2752" height="1536" alt="Gemini_Generated_Image_31mcgv31mcgv31mc" src="https://github.com/user-attachments/assets/b64e90c5-93c3-4c42-8f6a-158f38be30ae" />
+
 
 
 # 🎯 Checklist de Sucesso do Aluno (2026.2)

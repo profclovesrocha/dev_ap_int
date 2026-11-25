@@ -25,6 +25,7 @@ const SPRITE = `
   <symbol id="i-predio" viewBox="0 0 24 24"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2M10 6h4M10 10h4M10 14h4M10 18h4"/></symbol>
   <symbol id="i-saida" viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"/></symbol>
   <symbol id="i-contraste" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a10 10 0 0 1 0 20z" fill="currentColor"/></symbol>
+    <symbol id="i-raios" viewBox="0 0 22 22"><path d="M3.55 15.24 6.02 7.64M6.73 16.31 13.03 11.38M9.92 18.89 17.84 17.77"/></symbol>
   <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></symbol>
 </svg>`;
 
@@ -62,7 +63,7 @@ function montarCabecalho(paginaAtual) {
   <div class="cabecalho">
     <div class="container cabecalho__interno">
       <a class="marca" href="index.html" aria-label="VIVA — Cidade que Protege, página inicial">
-        <span class="marca__logo" aria-hidden="true">viva<span class="marca__ponto">.</span></span>
+        <span class="marca__logo" aria-hidden="true">viva<svg class="marca__raios" aria-hidden="true"><use href="#i-raios"></use></svg></span>
         <span class="marca__texto" aria-hidden="true">Cidade que Protege</span>
       </a>
       <button type="button" class="botao botao--saida" data-acao="saida-rapida">
@@ -84,7 +85,7 @@ function montarRodape() {
   return `
   <div class="container rodape__interno">
     <a class="marca marca--clara" href="index.html" aria-label="VIVA — Cidade que Protege, página inicial">
-      <span class="marca__logo" aria-hidden="true">viva<span class="marca__ponto">.</span></span>
+      <span class="marca__logo" aria-hidden="true">viva<svg class="marca__raios" aria-hidden="true"><use href="#i-raios"></use></svg></span>
     </a>
     <div class="rodape__texto">
       <p class="rodape__nome">VIVA • Cidade que Protege</p>

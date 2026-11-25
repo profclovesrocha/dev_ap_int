@@ -7,12 +7,26 @@
   background: linear-gradient(90deg, var(--fundo) 0%, #F6EDED 40%, #EFE5F6 100%);
 }
 
-.hero__arte {
+/* Moldura: limita a arte em telas muito largas */
+.hero__moldura {
   position: absolute;
   inset: 0;
-  background:
-    linear-gradient(90deg, var(--fundo) 0%, rgba(249, 242, 241, 0.92) 30%, rgba(249, 242, 241, 0) 62%),
-    url("../img/hero-recife.webp") right bottom / cover no-repeat;
+  max-width: 120rem;
+  margin-inline: auto;
+}
+
+/* Arte única (mulher, mancha lilás, skyline, arco e planta).
+   O fundo branco da imagem some com "multiply"; a máscara suaviza as bordas. */
+.hero__arte {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: min(64%, 56rem);
+  background: url("../img/hero.png") right bottom / cover no-repeat;
+  mix-blend-mode: multiply;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 20%, #000 94%, transparent 100%);
+  mask-image: linear-gradient(90deg, transparent 0%, #000 20%, #000 94%, transparent 100%);
 }
 
 .hero__grade {
@@ -21,7 +35,7 @@
   grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
   align-items: center;
   gap: 2rem;
-  min-height: 24.75rem;
+  min-height: 28rem;
 }
 
 .hero__texto { max-width: 36rem; padding-block: 3rem; }
@@ -63,33 +77,12 @@
 
 .hero .botao { padding: 1.05rem 1.75rem; font-size: 1.25rem; }
 
-/* Arte da mulher: mancha lilás (::before) e ilustração (::after) */
-.hero__mulher {
-  position: relative;
-  align-self: stretch;
-  min-height: 20rem;
-  isolation: isolate;
-}
-.hero__mulher::before {
-  content: "";
-  position: absolute;
-  inset: 8% 6% 0 14%;
-  background: var(--lilas-arte);
-  opacity: 0.55;
-  border-radius: 48% 52% 8% 8% / 55% 45% 8% 8%;
-}
-.hero__mulher::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: url("../img/hero-mulher.png") center bottom / contain no-repeat;
-}
+.hero__espaco { position: relative; align-self: stretch; }
 
 .selo-local {
   position: absolute;
   top: 1.25rem;
   right: 0;
-  z-index: 2;
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
@@ -170,7 +163,7 @@
 .card__seta { margin-left: auto; color: var(--marca); }
 
 /* Banner "Meninas e adolescentes" */
-.banner-area { padding-block: 3rem 3rem; }
+.banner-area { padding-block: 3rem; }
 
 .banner-menores {
   position: relative;
@@ -208,16 +201,20 @@
 }
 
 @media (max-width: 56rem) {
-  .hero__arte {
-    background:
-      linear-gradient(180deg, var(--fundo) 0%, rgba(249, 242, 241, 0.9) 55%, rgba(249, 242, 241, 0) 100%),
-      url("../img/hero-recife.webp") right bottom / cover no-repeat;
-  }
-  .hero__grade { grid-template-columns: 1fr; gap: 0; }
+  .hero { display: flex; flex-direction: column; }
+  .hero__grade { order: 1; grid-template-columns: 1fr; gap: 0; min-height: 0; }
   .hero__texto { padding-block: 2rem 1rem; }
-  .hero__mulher { min-height: 18rem; }
+  .hero__espaco { display: none; }
+  .hero__moldura { position: relative; inset: auto; order: 2; max-width: none; aspect-ratio: 2 / 1; }
+  .hero__arte {
+    width: 100%;
+    background-position: center bottom;
+    -webkit-mask-image: linear-gradient(180deg, transparent 0%, #000 18%);
+    mask-image: linear-gradient(180deg, transparent 0%, #000 18%);
+  }
   .banner-menores { flex-direction: column; align-items: flex-start; }
 }
 
-html.alto-contraste .hero__arte,
-html.alto-contraste .hero__mulher::before { display: none; }
+/* Alto contraste: sem arte decorativa no hero */
+html.alto-contraste .hero { background: #000; }
+html.alto-contraste .hero__moldura { display: none; }

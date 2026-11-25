@@ -2,9 +2,9 @@
 
 /* 1. Fontes locais (arquivos em frontend/fonts/). Sem eles, o navegador usa a fonte reserva. */
 @font-face {
-  font-family: "Montserrat";
-  src: url("../fonts/Montserrat.ttf") format("truetype");
-  font-weight: 100 900;
+  font-family: "Manrope";
+  src: url("../fonts/Manrope.ttf") format("truetype");
+  font-weight: 200 800;
   font-display: swap;
 }
 @font-face {
@@ -33,7 +33,7 @@
   --amarelo: #FFBF00;
   --tinta: #1F0A28;
 
-  --fonte-titulo: "Montserrat", "Segoe UI", system-ui, sans-serif;
+  --fonte-titulo: "Manrope", "Segoe UI", system-ui, sans-serif;
   --fonte-texto: "Inter", "Segoe UI", system-ui, sans-serif;
   --raio-sm: 0.75rem;
   --raio-md: 1rem;
@@ -220,20 +220,33 @@ a { color: inherit; }
   color: var(--marca);
   text-decoration: none;
 }
-.marca__logo {
+ .marca__logo {
+  position: relative;
+  display: inline-block;
+  padding-right: 0.55em;
   font-family: var(--fonte-titulo);
   font-size: 3rem;
   font-weight: 800;
   line-height: 1;
   letter-spacing: -0.04em;
 }
-.marca__ponto { color: var(--ambar); }
+.marca__raios {
+  position: absolute;
+  top: -0.12em;
+  right: 0;
+  width: 0.5em;
+  height: 0.5em;
+  fill: none;
+  stroke: var(--amarelo);
+  stroke-width: 3;
+  stroke-linecap: round;
+}
 .marca__texto {
-  max-width: 5.5rem;
+  max-width: 6.5rem;
   padding-left: 0.9rem;
   border-left: 1px solid var(--borda);
-  font-size: 0.95rem;
-  font-weight: 500;
+  font-size: 1.1rem;
+  font-weight: 600;
   line-height: 1.25;
 }
 
@@ -330,7 +343,7 @@ a { color: inherit; }
   bottom: 0;
   width: min(30rem, 40%);
   height: 100%;
-  background: url("../img/rodape-recife.svg") right bottom / contain no-repeat;
+  background: url("../img/rodape-recife.png") right bottom / contain no-repeat;
   pointer-events: none;
 }
 

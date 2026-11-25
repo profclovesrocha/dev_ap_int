@@ -1,0 +1,223 @@
+/* VIVA — estilos exclusivos da página inicial */
+
+/* Hero */
+.hero {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(90deg, var(--fundo) 0%, #F6EDED 40%, #EFE5F6 100%);
+}
+
+.hero__arte {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, var(--fundo) 0%, rgba(249, 242, 241, 0.92) 30%, rgba(249, 242, 241, 0) 62%),
+    url("../img/hero-recife.webp") right bottom / cover no-repeat;
+}
+
+.hero__grade {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 2rem;
+  min-height: 24.75rem;
+}
+
+.hero__texto { max-width: 36rem; padding-block: 3rem; }
+
+.chamada {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0 0 1.25rem;
+  color: var(--marca);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.chamada::before {
+  content: "";
+  width: 2.25rem;
+  height: 3px;
+  background: var(--ambar);
+  border-radius: 2px;
+}
+
+.hero h1 {
+  margin: 0 0 1rem;
+  color: var(--titulo);
+  font-family: var(--fonte-titulo);
+  font-size: clamp(2.25rem, 5.2vw, 4rem);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+
+.hero__sub {
+  margin: 0 0 2rem;
+  color: var(--texto-suave);
+  font-size: clamp(1.125rem, 2vw, 1.5rem);
+}
+
+.hero .botao { padding: 1.05rem 1.75rem; font-size: 1.25rem; }
+
+/* Arte da mulher: mancha lilás (::before) e ilustração (::after) */
+.hero__mulher {
+  position: relative;
+  align-self: stretch;
+  min-height: 20rem;
+  isolation: isolate;
+}
+.hero__mulher::before {
+  content: "";
+  position: absolute;
+  inset: 8% 6% 0 14%;
+  background: var(--lilas-arte);
+  opacity: 0.55;
+  border-radius: 48% 52% 8% 8% / 55% 45% 8% 8%;
+}
+.hero__mulher::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("../img/hero-mulher.png") center bottom / contain no-repeat;
+}
+
+.selo-local {
+  position: absolute;
+  top: 1.25rem;
+  right: 0;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 0.9rem;
+  background: var(--fundo);
+  border: 1px solid var(--borda);
+  border-radius: 999px;
+  color: var(--marca);
+  font-weight: 600;
+}
+.selo-local .icone { width: 1.125rem; height: 1.125rem; }
+
+/* Cards "Como podemos ajudar?" */
+.ajuda { padding-block: 2.5rem 1rem; }
+
+.titulo-secao {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin: 0 0 1.25rem;
+  color: var(--titulo);
+  font-family: var(--fonte-titulo);
+  font-size: clamp(1.5rem, 2.6vw, 2rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+.titulo-secao::before {
+  content: "";
+  width: 2.25rem;
+  height: 3px;
+  background: var(--ambar);
+  border-radius: 2px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  gap: 1.375rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  height: 100%;
+  padding: 1.25rem 1.5rem;
+  background: var(--fundo);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio-md);
+  color: var(--titulo);
+  text-decoration: none;
+}
+.card:hover { border-color: var(--marca); }
+
+.card__icone {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 4.25rem;
+  height: 4.25rem;
+  border-radius: var(--raio-sm);
+  background: linear-gradient(135deg, var(--lilas), #F4EAF8);
+  color: var(--marca);
+}
+.card__icone .icone { width: 2rem; height: 2rem; }
+
+.card__titulo {
+  display: block;
+  font-family: var(--fonte-titulo);
+  font-size: 1.375rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.card__texto { display: block; margin-top: 0.25rem; color: var(--texto-suave); }
+.card__seta { margin-left: auto; color: var(--marca); }
+
+/* Banner "Meninas e adolescentes" */
+.banner-area { padding-block: 3rem 3rem; }
+
+.banner-menores {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  min-height: 7.75rem;
+  padding: 1.25rem 2rem 1.25rem 28.5rem;
+  background: var(--primaria);
+  color: #fff;
+  border-radius: var(--raio-lg);
+}
+.banner-menores__arte {
+  position: absolute;
+  bottom: 0;
+  left: 4rem;
+  width: 22rem;
+  height: 9.5rem;
+  background: url("../img/mae-filha.png") left bottom / contain no-repeat;
+}
+.banner-menores__texto { flex: 1; }
+.banner-menores h2 {
+  margin: 0;
+  color: #fff;
+  font-family: var(--fonte-titulo);
+  font-size: clamp(1.5rem, 2.6vw, 2rem);
+  font-weight: 800;
+}
+.banner-menores p { margin: 0.25rem 0 0; color: var(--lilas-claro); font-size: 1.125rem; }
+
+/* Responsivo */
+@media (max-width: 64rem) {
+  .banner-menores { padding-left: 2rem; }
+  .banner-menores__arte { display: none; }
+}
+
+@media (max-width: 56rem) {
+  .hero__arte {
+    background:
+      linear-gradient(180deg, var(--fundo) 0%, rgba(249, 242, 241, 0.9) 55%, rgba(249, 242, 241, 0) 100%),
+      url("../img/hero-recife.webp") right bottom / cover no-repeat;
+  }
+  .hero__grade { grid-template-columns: 1fr; gap: 0; }
+  .hero__texto { padding-block: 2rem 1rem; }
+  .hero__mulher { min-height: 18rem; }
+  .banner-menores { flex-direction: column; align-items: flex-start; }
+}
+
+html.alto-contraste .hero__arte,
+html.alto-contraste .hero__mulher::before { display: none; }

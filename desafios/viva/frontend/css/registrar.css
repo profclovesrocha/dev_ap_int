@@ -1,0 +1,463 @@
+
+/* VIVA — página de registro urbano */
+
+/* Layout principal */
+
+.registro-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 32fr) minmax(0, 68fr);
+  max-width: 110rem;
+  min-height: 80vh;
+  margin-inline: auto;
+}
+
+.registro-layout [hidden] {
+  display: none !important;
+}
+
+/* Painel lateral */
+
+.registro-lateral {
+  display: flex;
+  flex-direction: column;
+  background: var(--lilas-claro);
+}
+
+.registro-lateral__conteudo {
+  padding: clamp(1.5rem, 4vw, 4rem);
+}
+
+.registro-lateral__icone {
+  width: 3.25rem;
+  height: 3.25rem;
+  color: var(--primaria-hover);
+}
+
+.registro-lateral h1 {
+  margin: 0.75rem 0 1.5rem;
+  font-family: var(--fonte-titulo);
+  font-size: clamp(1.9rem, 3vw, 3rem);
+  line-height: 1.15;
+  letter-spacing: -0.035em;
+  color: var(--titulo);
+}
+
+.registro-lateral__descricao {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--texto);
+}
+
+/* Aviso de emergência */
+
+.registro-alerta {
+  margin-top: 2rem;
+  padding: 1.25rem;
+  background: #fff0d8;
+  border: 1px solid #edcf9c;
+  border-radius: var(--raio-md);
+  color: #40271c;
+}
+
+.registro-alerta h2 {
+  margin: 0 0 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.registro-alerta p {
+  margin: 0.6rem 0;
+  font-size: 0.95rem;
+}
+
+.registro-alerta a {
+  display: inline-block;
+  padding: 0.1rem 0.4rem;
+  border-radius: 0.3rem;
+  background: var(--primaria);
+  color: #fff;
+  font-weight: 700;
+}
+
+/* Ilustração da cidade */
+
+.registro-lateral__arte {
+  min-height: 15rem;
+  margin-top: auto;
+  background:
+    url("../img/rodape-recife.png")
+    center bottom / contain no-repeat;
+}
+
+/* Área principal */
+
+.registro-principal {
+  min-width: 0;
+  padding: clamp(1.5rem, 3.5vw, 3.5rem);
+}
+
+.registro-etapa h2 {
+  margin: 0;
+  color: var(--titulo);
+  font-family: var(--fonte-titulo);
+  font-size: clamp(1.5rem, 2.4vw, 2rem);
+  letter-spacing: -0.035em;
+  line-height: 1.3;
+}
+
+.registro-subtitulo {
+  margin: 0.5rem 0 1.75rem;
+  color: var(--texto-suave);
+}
+
+/* Indicador de progresso */
+
+.registro-progresso {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 0 0 3rem;
+  padding: 0;
+  list-style: none;
+}
+
+.progresso__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  text-align: center;
+  color: var(--texto-suave);
+  font-size: 0.9rem;
+}
+
+.progresso__item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 1.15rem;
+  left: 50%;
+  width: 100%;
+  height: 2px;
+  background: var(--borda);
+}
+
+.progresso__numero {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  border: 2px solid var(--borda);
+  border-radius: 50%;
+  background: var(--fundo);
+  font-weight: 600;
+}
+
+.progresso__item.ativo,
+.progresso__item.concluido {
+  color: var(--titulo);
+  font-weight: 700;
+}
+
+.progresso__item.ativo .progresso__numero,
+.progresso__item.concluido .progresso__numero {
+  background: var(--primaria);
+  border-color: var(--primaria);
+  color: var(--sobre-primaria);
+}
+
+.progresso__item.concluido::after {
+  background: var(--primaria);
+}
+
+/* Formulário */
+
+.registro-grade {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.campo {
+  min-width: 0;
+}
+
+.campo--inteiro {
+  grid-column: 1 / -1;
+}
+
+.campo label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--titulo);
+  font-weight: 600;
+}
+
+.registro-principal input:not([type="checkbox"]),
+.registro-principal select,
+.registro-principal textarea {
+  width: 100%;
+  min-width: 0;
+  padding: 0.85rem 1rem;
+  border: 1px solid #a58eac;
+  border-radius: 0.65rem;
+  background: var(--fundo);
+  color: var(--texto);
+  font: inherit;
+}
+
+.registro-principal input::placeholder,
+.registro-principal textarea::placeholder {
+  color: var(--texto-suave);
+  opacity: 1;
+}
+
+.registro-principal textarea {
+  min-height: 8rem;
+  resize: vertical;
+}
+
+.registro-principal [aria-invalid="true"] {
+  border: 2px solid var(--vinho);
+}
+
+.consulta-cep {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.consulta-cep .botao {
+  padding-inline: 1rem;
+}
+
+.campo-ajuda,
+.contador,
+#mensagem-cep {
+  margin: 0.4rem 0 0;
+  color: var(--texto-suave);
+  font-size: 0.8rem;
+}
+
+.contador {
+  text-align: right;
+}
+
+.erro {
+  margin: 0.35rem 0 0;
+  color: var(--vinho);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.erro:empty,
+#mensagem-cep:empty {
+  display: none;
+}
+
+/* Privacidade */
+
+.registro-privacidade {
+  margin-block: 1.5rem;
+  padding: 1rem 1.25rem;
+  border-radius: var(--raio-sm);
+  background: var(--lilas);
+}
+
+.registro-privacidade h3 {
+  margin: 0 0 0.35rem;
+  color: var(--titulo);
+  font-size: 1rem;
+}
+
+.registro-privacidade p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.campo .registro-checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-weight: 400;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.registro-checkbox input {
+  flex: none;
+  width: 1.3rem;
+  height: 1.3rem;
+  margin: 0.2rem 0 0;
+  accent-color: var(--primaria);
+}
+
+/* Botões */
+
+.registro-acoes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.botao--secundario {
+  background: transparent;
+  border-color: var(--primaria);
+  color: var(--titulo);
+}
+
+.botao--secundario:hover {
+  background: var(--lilas-claro);
+}
+
+.registro-principal button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Etapa de revisão */
+
+.registro-revisao {
+  margin: 1.5rem 0;
+  padding: 1.5rem;
+  border: 1px solid var(--borda);
+  border-radius: var(--raio-md);
+}
+
+.registro-revisao > div + div {
+  margin-top: 1.25rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--borda);
+}
+
+.registro-revisao dt {
+  margin-bottom: 0.35rem;
+  color: var(--texto-suave);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.registro-revisao dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+
+/* Etapa de confirmação */
+
+.registro-confirmacao {
+  padding-block: 2rem;
+  text-align: center;
+}
+
+.confirmacao__icone {
+  display: grid;
+  place-items: center;
+  width: 5rem;
+  height: 5rem;
+  margin: 0 auto 1.5rem;
+  background: #e1f2e7;
+  color: #267347;
+  border-radius: 50%;
+  font-size: 2.5rem;
+}
+
+.registro-protocolo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 26rem;
+  margin: 1.5rem auto;
+  padding: 1.5rem;
+  background: var(--lilas);
+  border-radius: var(--raio-md);
+}
+
+.registro-protocolo strong {
+  color: var(--titulo);
+  font-size: 1.5rem;
+  overflow-wrap: anywhere;
+}
+
+.registro-nota {
+  margin: 2rem 0 0;
+  padding: 1rem;
+  background: var(--lilas-claro);
+  border-radius: var(--raio-sm);
+  color: var(--texto-suave);
+  font-size: 0.85rem;
+}
+
+/* Responsividade */
+
+@media (max-width: 64rem) {
+  .registro-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .registro-lateral__arte {
+    display: none;
+  }
+
+  .registro-lateral__conteudo {
+    padding: 2rem var(--margem-lateral);
+  }
+
+  .registro-alerta {
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 40rem) {
+  .registro-grade {
+    grid-template-columns: 1fr;
+  }
+
+  .registro-progresso {
+    margin-bottom: 2rem;
+  }
+
+  .progresso__item {
+    font-size: 0.75rem;
+    overflow-wrap: anywhere;
+  }
+
+  .registro-acoes {
+    flex-direction: column;
+  }
+
+  .registro-acoes .botao {
+    width: 100%;
+  }
+}
+
+/* Alto contraste */
+
+html.alto-contraste .registro-alerta,
+html.alto-contraste .registro-privacidade,
+html.alto-contraste .registro-nota,
+html.alto-contraste .registro-protocolo,
+html.alto-contraste .confirmacao__icone {
+  background: #000;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+html.alto-contraste .registro-lateral__icone,
+html.alto-contraste .erro {
+  color: var(--amarelo);
+}
+
+html.alto-contraste .registro-principal input,
+html.alto-contraste .registro-principal select,
+html.alto-contraste .registro-principal textarea,
+html.alto-contraste .botao--secundario,
+html.alto-contraste .progresso__numero {
+  border-color: #fff;
+}
+
+html.alto-contraste .registro-principal [aria-invalid="true"] {
+  border: 2px solid var(--amarelo);
+}

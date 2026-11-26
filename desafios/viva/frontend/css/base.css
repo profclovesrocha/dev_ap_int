@@ -213,3 +213,86 @@ textarea:focus-visible {
   outline: 3px solid var(--cor-destaque);
   outline-offset: 2px;
 }
+
+
+/* 10. Página de Serviços de Apoio */
+
+.pagina-servicos {
+  max-width: 90rem;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+.pagina-servicos > h2 {
+  color: var(--cor-primaria);
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.pagina-servicos > p {
+  color: var(--cor-texto);
+  max-width: 48rem;
+  margin-bottom: 2.5rem;
+}
+
+.pagina-servicos section {
+  margin-bottom: 2.5rem;
+}
+
+.pagina-servicos section > h3 {
+  color: var(--cor-primaria);
+  font-size: 1.5rem;
+  padding-bottom: 0.6rem;
+  margin-bottom: 1.25rem;
+  border-bottom: 3px solid #e1d3ee;
+}
+
+.servico-card {
+  background-color: var(--cor-branco);
+  border: 1px solid #d9cfe3;
+  border-left: 5px solid var(--cor-primaria);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 4px 12px rgba(42, 10, 51, 0.07);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.servico-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(42, 10, 51, 0.12);
+}
+
+.servico-card h4 {
+  color: var(--cor-primaria);
+  font-size: 1.2rem;
+  margin: 0 0 1rem;
+}
+
+.servico-card p {
+  color: var(--cor-texto);
+  margin: 0.45rem 0;
+  line-height: 1.6;
+}
+
+.servico-card strong {
+  color: var(--cor-primaria);
+}
+
+@media (max-width: 600px) {
+  .pagina-servicos {
+    padding: 2rem 1rem;
+  }
+
+  .pagina-servicos section > h3 {
+    font-size: 1.25rem;
+  }
+
+  .servico-card {
+    padding: 1.1rem;
+  }
+
+  .servico-card h4 {
+    font-size: 1.1rem;
+  }
+}

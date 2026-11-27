@@ -1,0 +1,220 @@
+/* VIVA — estilos exclusivos da página inicial */
+
+/* Hero */
+.hero {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(90deg, var(--fundo) 0%, #F6EDED 40%, #EFE5F6 100%);
+}
+
+/* Moldura: limita a arte em telas muito largas */
+.hero__moldura {
+  position: absolute;
+  inset: 0;
+  max-width: 120rem;
+  margin-inline: auto;
+}
+
+/* Arte única (mulher, mancha lilás, skyline, arco e planta).
+   O fundo branco da imagem some com "multiply"; a máscara suaviza as bordas. */
+.hero__arte {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: min(64%, 56rem);
+  background: url("../img/hero.png") right bottom / cover no-repeat;
+  mix-blend-mode: multiply;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 20%, #000 94%, transparent 100%);
+  mask-image: linear-gradient(90deg, transparent 0%, #000 20%, #000 94%, transparent 100%);
+}
+
+.hero__grade {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 2rem;
+  min-height: 28rem;
+}
+
+.hero__texto { max-width: 36rem; padding-block: 3rem; }
+
+.chamada {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0 0 1.25rem;
+  color: var(--marca);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.chamada::before {
+  content: "";
+  width: 2.25rem;
+  height: 3px;
+  background: var(--ambar);
+  border-radius: 2px;
+}
+
+.hero h1 {
+  margin: 0 0 1rem;
+  color: var(--titulo);
+  font-family: var(--fonte-titulo);
+  font-size: clamp(2.25rem, 5.2vw, 4rem);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+
+.hero__sub {
+  margin: 0 0 2rem;
+  color: var(--texto-suave);
+  font-size: clamp(1.125rem, 2vw, 1.5rem);
+}
+
+.hero .botao { padding: 1.05rem 1.75rem; font-size: 1.25rem; }
+
+.hero__espaco { position: relative; align-self: stretch; }
+
+.selo-local {
+  position: absolute;
+  top: 1.25rem;
+  right: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 0.9rem;
+  background: var(--fundo);
+  border: 1px solid var(--borda);
+  border-radius: 999px;
+  color: var(--marca);
+  font-weight: 600;
+}
+.selo-local .icone { width: 1.125rem; height: 1.125rem; }
+
+/* Cards "Como podemos ajudar?" */
+.ajuda { padding-block: 2.5rem 1rem; }
+
+.titulo-secao {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin: 0 0 1.25rem;
+  color: var(--titulo);
+  font-family: var(--fonte-titulo);
+  font-size: clamp(1.5rem, 2.6vw, 2rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+.titulo-secao::before {
+  content: "";
+  width: 2.25rem;
+  height: 3px;
+  background: var(--ambar);
+  border-radius: 2px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  gap: 1.375rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  height: 100%;
+  padding: 1.25rem 1.5rem;
+  background: var(--fundo);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio-md);
+  color: var(--titulo);
+  text-decoration: none;
+}
+.card:hover { border-color: var(--marca); }
+
+.card__icone {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 4.25rem;
+  height: 4.25rem;
+  border-radius: var(--raio-sm);
+  background: linear-gradient(135deg, var(--lilas), #F4EAF8);
+  color: var(--marca);
+}
+.card__icone .icone { width: 2rem; height: 2rem; }
+
+.card__titulo {
+  display: block;
+  font-family: var(--fonte-titulo);
+  font-size: 1.375rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.card__texto { display: block; margin-top: 0.25rem; color: var(--texto-suave); }
+.card__seta { margin-left: auto; color: var(--marca); }
+
+/* Banner "Meninas e adolescentes" */
+.banner-area { padding-block: 3rem; }
+
+.banner-menores {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  min-height: 7.75rem;
+  padding: 1.25rem 2rem 1.25rem 28.5rem;
+  background: var(--primaria);
+  color: #fff;
+  border-radius: var(--raio-lg);
+}
+.banner-menores__arte {
+  position: absolute;
+  bottom: 0;
+  left: 4rem;
+  width: 22rem;
+  height: 9.5rem;
+  background: url("../img/mae-filha.png") left bottom / contain no-repeat;
+}
+.banner-menores__texto { flex: 1; }
+.banner-menores h2 {
+  margin: 0;
+  color: #fff;
+  font-family: var(--fonte-titulo);
+  font-size: clamp(1.5rem, 2.6vw, 2rem);
+  font-weight: 800;
+}
+.banner-menores p { margin: 0.25rem 0 0; color: var(--lilas-claro); font-size: 1.125rem; }
+
+/* Responsivo */
+@media (max-width: 64rem) {
+  .banner-menores { padding-left: 2rem; }
+  .banner-menores__arte { display: none; }
+}
+
+@media (max-width: 56rem) {
+  .hero { display: flex; flex-direction: column; }
+  .hero__grade { order: 1; grid-template-columns: 1fr; gap: 0; min-height: 0; }
+  .hero__texto { padding-block: 2rem 1rem; }
+  .hero__espaco { display: none; }
+  .hero__moldura { position: relative; inset: auto; order: 2; max-width: none; aspect-ratio: 2 / 1; }
+  .hero__arte {
+    width: 100%;
+    background-position: center bottom;
+    -webkit-mask-image: linear-gradient(180deg, transparent 0%, #000 18%);
+    mask-image: linear-gradient(180deg, transparent 0%, #000 18%);
+  }
+  .banner-menores { flex-direction: column; align-items: flex-start; }
+}
+
+/* Alto contraste: sem arte decorativa no hero */
+html.alto-contraste .hero { background: #000; }
+html.alto-contraste .hero__moldura { display: none; }

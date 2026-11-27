@@ -1,0 +1,215 @@
+/* VIVA — estilos base */
+
+/* 1. Variáveis: cores e medidas definidas uma vez só */
+:root {
+  --cor-fundo: #faf7fc;
+  --cor-texto: #1f1b24;
+  --cor-primaria: #3b1f5c;
+  --cor-primaria-clara: #5b2a86;
+  --cor-destaque: #f2a900;
+  --cor-alerta: #8a1538;
+  --cor-branco: #ffffff;
+  --espaco: 1rem;
+  --largura-conteudo: 60rem;
+}
+
+/* 2. Regra geral: o tamanho de cada caixa inclui o espaçamento interno */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 3. Página: fonte, tamanho de letra e cores */
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: var(--cor-texto);
+  background-color: var(--cor-fundo);
+}
+
+/* 4. Cabeçalho */
+header {
+  background-color: var(--cor-primaria);
+  color: var(--cor-branco);
+  padding: var(--espaco);
+  padding-inline: max(var(--espaco), calc((100% - var(--largura-conteudo)) / 2));
+}
+
+header h1 {
+  margin: 0 0 0.5rem;
+  font-size: 1.5rem;
+}
+
+/* Linha com os telefones de emergência: destacada em vinho */
+header > p {
+  display: inline-block;
+  margin: 0 0 var(--espaco);
+  padding: 0.5rem 0.75rem;
+  background-color: var(--cor-alerta);
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+/* 5. Menu: lista em linha que quebra para a linha de baixo se faltar espaço */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+nav a {
+  display: inline-block;
+  padding: 0.75rem 1rem;
+  color: var(--cor-branco);
+  text-decoration: none;
+  border: 2px solid transparent;
+  border-radius: 0.5rem;
+}
+
+nav a:hover {
+  background-color: var(--cor-primaria-clara);
+}
+
+/* Página atual destacada */
+nav a[aria-current="page"] {
+  border-color: var(--cor-destaque);
+  font-weight: 700;
+}
+
+/* 6. Foco do teclado: contorno bem visível */
+a:focus-visible {
+  outline: 3px solid var(--cor-destaque);
+  outline-offset: 2px;
+}
+
+main a:focus-visible {
+  outline-color: var(--cor-primaria);
+}
+
+/* 7. Conteúdo principal: centralizado e com largura máxima */
+main {
+  max-width: var(--largura-conteudo);
+  margin: 0 auto;
+  padding: 1.5rem var(--espaco);
+}
+
+main h2 {
+  color: var(--cor-primaria);
+}
+
+main a {
+  color: var(--cor-primaria-clara);
+}
+
+/* 8. Rodapé */
+footer {
+  padding: var(--espaco);
+  text-align: center;
+  font-size: 0.9rem;
+  border-top: 1px solid #d9cfe3;
+}
+
+/* 9. Botão de saída rápida: sempre visível no canto da tela */
+.saida-rapida {
+  position: fixed;
+  top: 0.5rem;
+  right: 0.5rem;
+  z-index: 1000;
+  padding: 0.75rem 1rem;
+  font: inherit;
+  font-weight: 700;
+  color: var(--cor-texto);
+  background-color: var(--cor-destaque);
+  border: 2px solid var(--cor-texto);
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.saida-rapida:hover {
+  background-color: #ffc933;
+}
+
+.saida-rapida:focus-visible {
+  outline: 3px solid var(--cor-texto);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 6px var(--cor-branco);
+}
+
+/* Evita que o título fique por baixo do botão */
+header h1 {
+  padding-right: 9rem;
+}
+/* 10. Formulário */
+.aviso {
+  padding: 0.75rem 1rem;
+  background-color: #fff3cd;
+  border-left: 6px solid var(--cor-destaque);
+  border-radius: 0.5rem;
+}
+
+.campo {
+  margin-bottom: 1.25rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-weight: 700;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 0.75rem;
+  font: inherit;
+  color: var(--cor-texto);
+  background-color: var(--cor-branco);
+  border: 2px solid #8a7a99;
+  border-radius: 0.5rem;
+}
+
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--cor-destaque);
+  outline-offset: 2px;
+}
+
+[aria-invalid="true"] {
+  border-color: var(--cor-alerta);
+}
+
+.erro {
+  margin: 0.25rem 0 0;
+  color: var(--cor-alerta);
+  font-weight: 700;
+}
+
+.erro:not(:empty)::before {
+  content: "Atenção: ";
+}
+
+.botao {
+  padding: 0.75rem 1.5rem;
+  font: inherit;
+  font-weight: 700;
+  color: var(--cor-branco);
+  background-color: var(--cor-primaria);
+  border: 2px solid var(--cor-primaria);
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.botao:hover {
+  background-color: var(--cor-primaria-clara);
+}
+
+.botao:focus-visible {
+  outline: 3px solid var(--cor-destaque);
+  outline-offset: 2px;
+}

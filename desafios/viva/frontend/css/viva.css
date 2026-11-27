@@ -1,0 +1,372 @@
+/* VIVA — sistema visual compartilhado: tokens, base, barra de emergência, cabeçalho e rodapé */
+
+/* 1. Fontes locais (arquivos em frontend/fonts/). Sem eles, o navegador usa a fonte reserva. */
+@font-face {
+  font-family: "Manrope";
+  src: url("../fonts/Manrope.ttf") format("truetype");
+  font-weight: 200 800;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/Inter.ttf") format("truetype");
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+/* 2. Tokens: cores e medidas definidas uma vez só */
+:root {
+  --fundo: #F9F2F1;
+  --titulo: #2A0A33;
+  --texto: #2D132C;
+  --texto-suave: #5A4560;
+  --borda: #DBCBD8;
+  --primaria: #4B1B55;
+  --primaria-hover: #5F2B70;
+  --sobre-primaria: #FFFFFF;
+  --marca: #4B1B55;
+  --lilas: #E1D3EE;
+  --lilas-claro: #EADBF2;
+  --lilas-arte: #D9B5DE;
+  --ambar: #E3A02B;
+  --vinho: #8B1538;
+  --amarelo: #FFBF00;
+  --tinta: #1F0A28;
+
+  --fonte-titulo: "Manrope", "Segoe UI", system-ui, sans-serif;
+  --fonte-texto: "Inter", "Segoe UI", system-ui, sans-serif;
+  --raio-sm: 0.75rem;
+  --raio-md: 1rem;
+  --raio-lg: 1.5rem;
+  --largura-max: 90rem;
+  --margem-lateral: clamp(1rem, 3.5vw, 3.375rem);
+}
+
+/* 3. Base */
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--fonte-texto);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--texto);
+  background: var(--fundo);
+}
+
+img, svg { max-width: 100%; }
+a { color: inherit; }
+
+.container {
+  width: 100%;
+  max-width: var(--largura-max);
+  margin-inline: auto;
+  padding-inline: var(--margem-lateral);
+}
+
+.icone {
+  flex: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.pular-conteudo {
+  position: absolute;
+  top: -5rem;
+  left: 1rem;
+  z-index: 100;
+  padding: 0.75rem 1rem;
+  background: var(--amarelo);
+  color: var(--tinta);
+  font-weight: 700;
+  border-radius: 0.5rem;
+}
+.pular-conteudo:focus { top: 1rem; }
+
+.aviso-noscript {
+  margin: 0;
+  padding: 0.75rem var(--margem-lateral);
+  background: var(--vinho);
+  color: #fff;
+  text-align: center;
+}
+
+/* 4. Acessibilidade: foco visível e menos movimento */
+:focus-visible {
+  outline: 3px solid var(--primaria-hover);
+  outline-offset: 3px;
+}
+.topbar :focus-visible,
+.rodape :focus-visible,
+.botao--contorno:focus-visible { outline-color: var(--amarelo); }
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; scroll-behavior: auto !important; }
+}
+
+/* 5. Botões */
+.botao {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.85rem 1.4rem;
+  border: 2px solid transparent;
+  border-radius: var(--raio-sm);
+  font: inherit;
+  font-weight: 700;
+  line-height: 1.2;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.botao--primario { background: var(--primaria); color: var(--sobre-primaria); }
+.botao--primario:hover { background: var(--primaria-hover); }
+.botao--primario .icone:first-child { color: var(--amarelo); }
+
+.botao--contorno { background: transparent; color: #fff; border-color: var(--amarelo); }
+.botao--contorno:hover { background: rgba(255, 191, 0, 0.18); }
+
+/* Saída rápida: amarelo #FFBF00, texto escuro, borda escura para alto contraste */
+.botao--saida {
+  background: var(--amarelo);
+  color: var(--tinta);
+  border-color: var(--tinta);
+}
+.botao--saida:hover { background: #FFCE3D; }
+
+/* 6. Barra de emergência (vinho #8B1538) e ferramentas de acessibilidade */
+.topbar { background: var(--vinho); color: #fff; }
+
+.topbar__interno {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 0.25rem 1rem;
+  min-height: 3.125rem;
+  padding-block: 0.35rem;
+}
+
+.topbar__emergencia {
+  grid-column: 2;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem 0.6rem;
+  margin: 0;
+}
+.topbar__emergencia .icone { width: 1.25rem; height: 1.25rem; color: var(--amarelo); }
+
+.topbar__ferramentas {
+  grid-column: 3;
+  justify-self: end;
+  display: flex;
+  align-items: center;
+  gap: 0.125rem;
+}
+
+.ferramenta {
+  display: grid;
+  place-items: center;
+  min-width: 2.5rem;
+  height: 2.5rem;
+  padding: 0 0.5rem;
+  background: transparent;
+  color: #fff;
+  border: 0;
+  border-radius: 0.5rem;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+.ferramenta:hover { background: rgba(255, 255, 255, 0.16); }
+.ferramenta--padrao { color: var(--amarelo); }
+.ferramenta[aria-pressed="true"] { background: #fff; color: var(--vinho); }
+
+/* 7. Cabeçalho e menu */
+.cabecalho { background: var(--fundo); box-shadow: 0 1px 0 var(--borda); }
+
+.cabecalho__interno {
+  display: flex;
+  align-items: center;
+  gap: 1rem 1.5rem;
+  min-height: 6.5rem;
+}
+
+.marca {
+  order: 1;
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  color: var(--marca);
+  text-decoration: none;
+}
+ .marca__logo {
+  position: relative;
+  display: inline-block;
+  padding-right: 0.55em;
+  font-family: var(--fonte-titulo);
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+.marca__raios {
+  position: absolute;
+  top: -0.12em;
+  right: 0;
+  width: 0.5em;
+  height: 0.5em;
+  fill: none;
+  stroke: var(--amarelo);
+  stroke-width: 3;
+  stroke-linecap: round;
+}
+.marca__texto {
+  max-width: 6.5rem;
+  padding-left: 0.9rem;
+  border-left: 1px solid var(--borda);
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.menu { order: 2; margin-inline: auto; }
+.menu__lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.menu__link {
+  display: block;
+  padding: 0.7rem 0.9rem;
+  border-radius: var(--raio-sm);
+  color: var(--titulo);
+  font-weight: 500;
+  text-decoration: none;
+}
+.menu__link:hover { background: var(--lilas-claro); }
+.menu__link[aria-current="page"] { background: var(--lilas); font-weight: 700; }
+
+.cabecalho .botao--saida { order: 3; }
+
+.menu__alternar {
+  display: none;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.7rem 0.9rem;
+  background: transparent;
+  color: var(--titulo);
+  border: 2px solid var(--borda);
+  border-radius: var(--raio-sm);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@media (max-width: 80rem) {
+  .menu__link { padding: 0.65rem 0.65rem; font-size: 0.95rem; }
+}
+
+@media (max-width: 68.75rem) {
+  .cabecalho__interno { flex-wrap: wrap; min-height: 0; padding-block: 0.9rem; }
+  .marca { margin-right: auto; }
+  .cabecalho .botao--saida { order: 2; }
+  .menu__alternar { order: 3; display: inline-flex; }
+  .menu { order: 4; flex-basis: 100%; margin: 0; display: none; }
+  .menu--aberto { display: block; }
+  .menu__lista { flex-direction: column; }
+}
+
+@media (max-width: 52rem) {
+  .topbar__interno { grid-template-columns: 1fr; justify-items: center; }
+  .topbar__emergencia, .topbar__ferramentas { grid-column: 1; justify-self: center; }
+}
+
+@media (max-width: 30rem) {
+  .marca__texto { display: none; }
+  .marca__logo { font-size: 2.25rem; }
+  .cabecalho .botao--saida { padding: 0.7rem 0.9rem; }
+}
+
+/* 8. Rodapé */
+.rodape {
+  position: relative;
+  overflow: hidden;
+  background: var(--primaria);
+  color: #fff;
+}
+.rodape__interno {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1.25rem;
+  min-height: 5.75rem;
+  padding-block: 1rem;
+}
+.marca--clara { color: #fff; }
+.marca--clara .marca__logo { font-size: 2.5rem; }
+
+.rodape__texto {
+  padding-left: 1.25rem;
+  border-left: 1px solid rgba(255, 255, 255, 0.4);
+}
+.rodape__nome { margin: 0; font-weight: 600; }
+.rodape__aviso { margin: 0.15rem 0 0; max-width: 40rem; font-size: 0.875rem; color: var(--lilas); }
+
+.rodape__arte {
+  position: absolute;
+  right: var(--margem-lateral);
+  bottom: 0;
+  width: min(30rem, 40%);
+  height: 100%;
+  background: url("../img/rodape-recife.png") right bottom / contain no-repeat;
+  pointer-events: none;
+}
+
+@media (max-width: 56rem) {
+  .rodape__arte { display: none; }
+  .rodape__texto { padding-left: 0; border-left: 0; }
+}
+
+/* 9. Alto contraste (ativado pelo botão da barra superior) */
+html.alto-contraste {
+  --fundo: #000;
+  --titulo: #fff;
+  --texto: #fff;
+  --texto-suave: #fff;
+  --borda: #fff;
+  --primaria: #000;
+  --primaria-hover: #222;
+  --marca: #FFBF00;
+  --lilas: #333;
+  --lilas-claro: #222;
+}
+html.alto-contraste :focus-visible { outline-color: var(--amarelo); }
+html.alto-contraste .botao--primario,
+html.alto-contraste .banner-menores { border: 2px solid #fff; }
+html.alto-contraste .rodape { border-top: 2px solid #fff; }
+html.alto-contraste .menu__link[aria-current="page"] { outline: 2px solid #fff; }

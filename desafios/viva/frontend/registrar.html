@@ -1,0 +1,344 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registrar um problema — VIVA</title>
+
+  <link rel="stylesheet" href="css/viva.css">
+  <link rel="stylesheet" href="css/registrar.css">
+
+  <script src="js/layout.js" defer></script>
+  <script src="js/registrar.js" defer></script>
+</head>
+<body>
+
+  <a class="pular-conteudo" href="#conteudo">
+    Pular para o conteúdo
+  </a>
+
+  <header id="topo"></header>
+
+  <noscript>
+    <p class="aviso-noscript">
+      Ative o JavaScript para utilizar o formulário.
+      Em emergência, ligue 190.
+    </p>
+  </noscript>
+
+  <main id="conteudo" class="registro-layout">
+
+    <!-- Painel lateral -->
+    <aside class="registro-lateral">
+
+      <div class="registro-lateral__conteudo">
+
+        <svg class="icone registro-lateral__icone" aria-hidden="true">
+          <use href="#i-pin"></use>
+        </svg>
+
+        <h1>Registrar um problema urbano</h1>
+
+        <p class="registro-lateral__descricao">
+          Ajude a tornar Recife uma cidade mais segura para todas.
+          Informe situações como iluminação precária, espaços
+          abandonados, mato alto ou outros pontos que gerem insegurança.
+        </p>
+
+        <div class="registro-alerta">
+          <h2>Atenção: isso não é um serviço de emergência.</h2>
+
+          <p>
+            Em caso de risco imediato ou violência em andamento,
+            <a href="tel:190">ligue 190.</a>
+          </p>
+
+          <p>
+            Para orientação e atendimento,
+            <a href="tel:180">ligue 180.</a>
+          </p>
+        </div>
+
+      </div>
+
+      <div class="registro-lateral__arte" aria-hidden="true"></div>
+
+    </aside>
+
+    <!-- Área principal -->
+    <section class="registro-principal" aria-label="Registro urbano">
+
+      <!-- Indicador de progresso -->
+      <ol class="registro-progresso" aria-label="Etapas do registro">
+
+        <li class="progresso__item ativo" aria-current="step">
+          <span class="progresso__numero">1</span>
+          <span>Descrever o problema</span>
+        </li>
+
+        <li class="progresso__item">
+          <span class="progresso__numero">2</span>
+          <span>Revisar informações</span>
+        </li>
+
+        <li class="progresso__item">
+          <span class="progresso__numero">3</span>
+          <span>Registro enviado</span>
+        </li>
+
+      </ol>
+
+      <!-- Etapa 1 -->
+      <section id="etapa-1" class="registro-etapa">
+
+        <h2 tabindex="-1">Descreva o problema</h2>
+
+        <p class="registro-subtitulo">
+          Preencha as informações abaixo para registrar a situação.
+        </p>
+
+        <form id="form-registro" novalidate>
+
+          <div class="registro-grade">
+
+            <div class="campo">
+              <label for="categoria">Categoria do problema *</label>
+
+              <select id="categoria" name="categoria"
+                required aria-describedby="erro-categoria">
+
+                <option value="">Selecione uma categoria</option>
+                <option value="iluminacao">Iluminação precária</option>
+                <option value="abandono">Local abandonado ou perigoso</option>
+                <option value="policiamento">Falta de policiamento</option>
+                <option value="transporte">Transporte inseguro</option>
+                <option value="mato">Mato alto ou falta de manutenção</option>
+                <option value="outro">Outro</option>
+
+              </select>
+
+              <p class="erro" id="erro-categoria"></p>
+            </div>
+
+            <div class="campo">
+              <label for="cep">CEP da região (opcional)</label>
+
+              <div class="consulta-cep">
+
+                <input type="text" id="cep"
+                  inputmode="numeric"
+                  maxlength="9"
+                  placeholder="00000-000"
+                  autocomplete="off"
+                  aria-describedby="ajuda-cep mensagem-cep">
+
+                <button type="button" id="buscar-cep"
+                  class="botao botao--primario">
+                  Buscar
+                </button>
+
+              </div>
+
+              <p class="campo-ajuda" id="ajuda-cep">
+                Informe o CEP da região, não o da sua residência.
+              </p>
+
+              <p id="mensagem-cep" role="status"></p>
+            </div>
+
+            <div class="campo campo--inteiro">
+
+              <label for="bairro">Bairro *</label>
+
+              <input type="text" id="bairro" name="bairro"
+                placeholder="Informe o bairro do Recife"
+                autocomplete="off"
+                maxlength="60"
+                required
+                aria-describedby="erro-bairro">
+
+              <p class="erro" id="erro-bairro"></p>
+
+            </div>
+
+            <div class="campo campo--inteiro">
+
+              <label for="descricao">Descrição da situação *</label>
+
+              <textarea id="descricao" name="descricao"
+                rows="5"
+                maxlength="500"
+                required
+                placeholder="Ex.: iluminação deficiente, terreno abandonado ou área sem manutenção..."
+                aria-describedby="contador-descricao erro-descricao"></textarea>
+
+              <p class="contador" id="contador-descricao">
+                0/500 caracteres
+              </p>
+
+              <p class="erro" id="erro-descricao"></p>
+
+            </div>
+
+          </div>
+
+          <div class="registro-privacidade">
+
+            <h3>Sua privacidade importa</h3>
+
+            <p>
+              Não informe nomes, telefones, e-mails ou endereços
+              exatos. Registre somente problemas urbanos.
+            </p>
+
+          </div>
+
+          <div class="campo campo-ciencia">
+
+            <label class="registro-checkbox" for="ciencia">
+
+              <input type="checkbox" id="ciencia" required
+                aria-describedby="erro-ciencia">
+
+              <span>
+                Estou ciente de que este é um projeto acadêmico
+                e não um canal oficial de atendimento ou denúncia. *
+              </span>
+
+            </label>
+
+            <p class="erro" id="erro-ciencia"></p>
+
+          </div>
+
+          <div class="registro-acoes">
+
+            <button type="reset" class="botao botao--secundario">
+              Limpar formulário
+            </button>
+
+            <button type="submit" class="botao botao--primario">
+              Continuar
+              <svg class="icone" aria-hidden="true">
+                <use href="#i-seta"></use>
+              </svg>
+            </button>
+
+          </div>
+
+        </form>
+
+      </section>
+
+      <!-- Etapa 2 -->
+      <section id="etapa-2" class="registro-etapa" hidden>
+
+        <h2 tabindex="-1">Revise suas informações</h2>
+
+        <p class="registro-subtitulo">
+          Confira os dados antes de confirmar o registro.
+        </p>
+
+        <dl class="registro-revisao">
+
+          <div>
+            <dt>Categoria do problema</dt>
+            <dd id="revisao-categoria"></dd>
+          </div>
+
+          <div>
+            <dt>Bairro</dt>
+            <dd id="revisao-bairro"></dd>
+          </div>
+
+          <div>
+            <dt>Descrição da situação</dt>
+            <dd id="revisao-descricao"></dd>
+          </div>
+
+        </dl>
+
+        <div class="registro-privacidade">
+          <h3>Confira sua privacidade</h3>
+          <p>
+            Verifique se a descrição não contém informações pessoais
+            ou endereços exatos.
+          </p>
+        </div>
+
+                <p id="mensagem-envio" class="mensagem-estado" role="status"></p>
+
+        <div class="registro-acoes">
+
+          <button type="button" id="voltar-editar"
+            class="botao botao--secundario">
+            Voltar e editar
+          </button>
+
+          <button type="button" id="confirmar-registro"
+            class="botao botao--primario">
+            Confirmar registro
+          </button>
+
+        </div>
+
+      </section>
+
+      <!-- Etapa 3 -->
+            <section id="etapa-3"
+        class="registro-etapa registro-confirmacao" hidden>
+
+        <div class="confirmacao__icone" aria-hidden="true">
+          ✓
+        </div>
+
+        <h2 tabindex="-1">Registro enviado!</h2>
+
+        <p>
+          Obrigada por contribuir para uma cidade mais segura.
+        </p>
+
+        <div class="registro-protocolo">
+          <span>Seu protocolo</span>
+          <strong id="numero-protocolo"></strong>
+        </div>
+
+        <p class="registro-subtitulo">
+          <strong>Guarde este código.</strong> Como o VIVA não pede
+          cadastro nem dados pessoais, ele é a única forma de acompanhar
+          o registro e não pode ser recuperado.
+        </p>
+
+        <button type="button" id="copiar-protocolo"
+          class="botao botao--secundario">
+          Copiar protocolo
+        </button>
+
+        <p id="mensagem-copia" class="mensagem-estado" role="status"></p>
+
+        <p class="registro-subtitulo">
+          Projeto acadêmico: o registro fica guardado no banco de dados
+          do projeto e não é encaminhado a órgãos públicos.
+        </p>
+
+        <button type="button" id="novo-registro"
+          class="botao botao--primario">
+          Realizar novo registro
+        </button>
+
+      </section> 
+      
+      <p class="registro-nota">
+        <strong>Projeto acadêmico:</strong>
+        os registros não são encaminhados automaticamente
+        aos órgãos públicos.
+      </p>
+
+    </section>
+  </main>
+
+  <footer id="rodape"></footer>
+
+</body>
+</html>

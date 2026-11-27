@@ -461,3 +461,14 @@ html.alto-contraste .progresso__numero {
 html.alto-contraste .registro-principal [aria-invalid="true"] {
   border: 2px solid var(--amarelo);
 }
+
+/* Mensagens de envio e de cópia do protocolo */
+.mensagem-estado {
+  margin: 0 0 1rem;
+  font-weight: 700;
+  color: var(--vinho);
+}
+
+.mensagem-estado:empty {
+  display: none;
+}

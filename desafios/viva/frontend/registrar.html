@@ -154,7 +154,7 @@
               <input type="text" id="bairro" name="bairro"
                 placeholder="Informe o bairro do Recife"
                 autocomplete="off"
-                maxlength="100"
+                maxlength="60"
                 required
                 aria-describedby="erro-bairro">
 
@@ -267,6 +267,8 @@
           </p>
         </div>
 
+                <p id="mensagem-envio" class="mensagem-estado" role="status"></p>
+
         <div class="registro-acoes">
 
           <button type="button" id="voltar-editar"
@@ -276,7 +278,7 @@
 
           <button type="button" id="confirmar-registro"
             class="botao botao--primario">
-            Confirmar simulação
+            Confirmar registro
           </button>
 
         </div>
@@ -284,27 +286,40 @@
       </section>
 
       <!-- Etapa 3 -->
-      <section id="etapa-3"
+            <section id="etapa-3"
         class="registro-etapa registro-confirmacao" hidden>
 
         <div class="confirmacao__icone" aria-hidden="true">
           ✓
         </div>
 
-        <h2 tabindex="-1">Simulação concluída!</h2>
+        <h2 tabindex="-1">Registro enviado!</h2>
 
         <p>
           Obrigada por contribuir para uma cidade mais segura.
         </p>
 
         <div class="registro-protocolo">
-          <span>Exemplo de protocolo</span>
-          <strong id="numero-protocolo">VIVA-DEMO-0001</strong>
+          <span>Seu protocolo</span>
+          <strong id="numero-protocolo"></strong>
         </div>
 
         <p class="registro-subtitulo">
-          Este é um registro demonstrativo.
-          Nenhum dado foi enviado ou armazenado no servidor.
+          <strong>Guarde este código.</strong> Como o VIVA não pede
+          cadastro nem dados pessoais, ele é a única forma de acompanhar
+          o registro e não pode ser recuperado.
+        </p>
+
+        <button type="button" id="copiar-protocolo"
+          class="botao botao--secundario">
+          Copiar protocolo
+        </button>
+
+        <p id="mensagem-copia" class="mensagem-estado" role="status"></p>
+
+        <p class="registro-subtitulo">
+          Projeto acadêmico: o registro fica guardado no banco de dados
+          do projeto e não é encaminhado a órgãos públicos.
         </p>
 
         <button type="button" id="novo-registro"
@@ -312,16 +327,15 @@
           Realizar novo registro
         </button>
 
-      </section>
-
+      </section> 
+      
       <p class="registro-nota">
         <strong>Projeto acadêmico:</strong>
-        os registros são demonstrativos e não são encaminhados
-        automaticamente aos órgãos públicos.
+        os registros não são encaminhados automaticamente
+        aos órgãos públicos.
       </p>
 
     </section>
-
   </main>
 
   <footer id="rodape"></footer>

@@ -11,7 +11,10 @@ function temDadoPessoal(texto) {
 function lerTexto(valor) {
   return typeof valor === "string" ? valor.trim() : "";
 }
-
+// Conta caracteres do mesmo modo que o banco (emojis valem 1, não 2)
+function tamanho(texto) {
+  return Array.from(texto).length;
+}
 function validarRegistro(corpo) {
   const categoria = lerTexto(corpo.categoria);
   const bairro = lerTexto(corpo.bairro);
@@ -22,13 +25,13 @@ function validarRegistro(corpo) {
     erros.categoria = "Escolha um tipo de problema válido.";
   }
 
-  if (bairro.length < 3 || bairro.length > 60) {
+    if (tamanho(bairro) < 3 || tamanho(bairro) > 60) {
     erros.bairro = "Informe o bairro com 3 a 60 caracteres.";
   } else if (temDadoPessoal(bairro)) {
     erros.bairro = "Informe somente o nome do bairro.";
   }
 
-  if (descricao.length < 20 || descricao.length > 500) {
+    if (tamanho(descricao) < 20 || tamanho(descricao) > 500) {
     erros.descricao = "A descrição deve ter de 20 a 500 caracteres.";
   } else if (temDadoPessoal(descricao)) {
     erros.descricao = "Remova possíveis telefones ou e-mails.";

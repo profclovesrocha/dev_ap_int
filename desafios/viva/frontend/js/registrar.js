@@ -55,6 +55,10 @@ function validarCampo(campo) {
       mostrarErro(campo, "Informe o bairro com pelo menos 3 caracteres.");
       return false;
     }
+        if (valor.length > 60) {
+      mostrarErro(campo, "O nome do bairro deve ter até 60 caracteres.");
+      return false;
+    }
 
     if (temDadoPessoal(valor)) {
       mostrarErro(campo, "Informe somente o nome do bairro.");
@@ -298,15 +302,73 @@ document.getElementById("voltar-editar").addEventListener(
   }
 );
 
-// 7. Confirmação demonstrativa
-// O envio real será implementado na etapa do backend.
+// 7. Envio do registro ao servidor
 
-document.getElementById("confirmar-registro").addEventListener(
-  "click",
-  function () {
-    if (etapaAtual !== 2) {
+const botaoConfirmar = document.getElementById("confirmar-registro");
+const botaoVoltar = document.getElementById("voltar-editar");
+const mensagemEnvio = document.getElementById("mensagem-envio");
+const mensagemCopia = document.getElementById("mensagem-copia");
+
+let envioEmAndamento = false;
+
+function alternarEnvio(enviando) {
+  envioEmAndamento = enviando;
+
+  botaoConfirmar.disabled = enviando;
+  botaoVoltar.disabled = enviando;
+  botaoConfirmar.textContent = enviando ? "Enviando..." : "Confirmar registro";
+}
+
+// Lê os dados do formulário. Deve ser chamada ANTES de limpá-lo.
+function montarRegistro() {
+  return {
+    categoria: campoCategoria.value,
+    bairro: campoBairro.value.trim(),
+    descricao: campoDescricao.value.trim(),
+    ciencia: campoCiencia.checked
+  };
+}
+
+// Se o servidor recusar algum campo, volta à etapa 1 mostrando os erros
+function mostrarErrosDoServidor(detalhes) {
+  mostrarEtapa(1);
+
+  campos.forEach(function (campo) {
+    if (detalhes[campo.id]) {
+      mostrarErro(campo, detalhes[campo.id]);
+    }
+  });
+}
+
+botaoConfirmar.addEventListener("click", async function () {
+  if (etapaAtual !== 2 || envioEmAndamento) {
+    return;
+  }
+
+  const registro = montarRegistro();
+
+  mensagemEnvio.textContent = "";
+  alternarEnvio(true);
+
+  try {
+    const resposta = await fetch("/api/registros", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(registro)
+    });
+
+    const dados = await resposta.json();
+
+    if (resposta.status === 400 && dados.detalhes) {
+      mostrarErrosDoServidor(dados.detalhes);
       return;
     }
+
+    if (!resposta.ok) {
+      throw new Error("Falha no envio.");
+    }
+
+    document.getElementById("numero-protocolo").textContent = dados.protocolo;
 
     formulario.reset();
 
@@ -315,9 +377,47 @@ document.getElementById("confirmar-registro").addEventListener(
     document.getElementById("revisao-descricao").textContent = "";
 
     mostrarEtapa(3);
+
+  } catch (erro) {
+    mensagemEnvio.textContent =
+      "Não foi possível enviar o registro agora. " +
+      "Seus dados continuam preenchidos. Tente novamente em instantes.";
+
+  } finally {
+    alternarEnvio(false);
+  }
+});
+
+// Copiar o protocolo (ele é a única forma de acompanhar o registro)
+
+document.getElementById("copiar-protocolo").addEventListener(
+  "click",
+  async function () {
+    const protocolo = document.getElementById("numero-protocolo").textContent;
+
+    try {
+      await navigator.clipboard.writeText(protocolo);
+      mensagemCopia.textContent = "Protocolo copiado.";
+    } catch (erro) {
+      mensagemCopia.textContent =
+        "Não foi possível copiar. Anote o protocolo manualmente.";
+    }
   }
 );
 
+// Limpa as mensagens e o protocolo anterior ao recomeçar
+
+formulario.addEventListener("reset", function () {
+  mensagemEnvio.textContent = "";
+});
+
+document.getElementById("novo-registro").addEventListener(
+  "click",
+  function () {
+    document.getElementById("numero-protocolo").textContent = "";
+    mensagemCopia.textContent = "";
+  }
+);
 // 8. Limpeza do formulário
 
 formulario.addEventListener("reset", function () {
